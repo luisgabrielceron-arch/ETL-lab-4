@@ -1,0 +1,134 @@
+<html><head><meta charset='utf-8'><title>Output Validation Comparison</title><style>body{font-family:Arial,sans-serif;margin:32px;}h1,h2{color:#222;}table{border-collapse:collapse;width:100%;font-size:14px;}th,td{border:1px solid #ccc;padding:8px;text-align:left;}th{background:#f4f4f4;}</style></head><body><h1>Output Validation Comparison Table</h1><p><strong>Data Quality Score (input):</strong> 0.0%</p><p><strong>Data Quality Score (output):</strong> 100.0%</p><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Expectation</th>
+      <th>Raw (pass %)</th>
+      <th>Clean (pass %)</th>
+      <th>Status</th>
+      <th>Dimension</th>
+      <th>Output Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Custom: total_revenue == quantity * price (tol ±0.01)</td>
+      <td>97.0980</td>
+      <td>100.0</td>
+      <td>RESOLVED</td>
+      <td>Accuracy</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>customer_id not null</td>
+      <td>96.0392</td>
+      <td>100.0</td>
+      <td>RESOLVED</td>
+      <td>Completeness</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>invoice_date not null</td>
+      <td>99.7451</td>
+      <td>100.0</td>
+      <td>RESOLVED</td>
+      <td>Completeness</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>invoice_id not null</td>
+      <td>NaN</td>
+      <td>100.0</td>
+      <td>NEW</td>
+      <td>Completeness</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>country in {Colombia, Ecuador, Peru, Chile}</td>
+      <td>56.6471</td>
+      <td>100.0</td>
+      <td>RESOLVED</td>
+      <td>Consistency</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>invoice_date matches YYYY-MM-DD</td>
+      <td>96.5009</td>
+      <td>100.0</td>
+      <td>RESOLVED</td>
+      <td>Timeliness</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>invoice_date parsed as datetime type</td>
+      <td>NaN</td>
+      <td>100.0</td>
+      <td>NEW</td>
+      <td>Timeliness</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>invoice_date within 2023</td>
+      <td>NaN</td>
+      <td>100.0</td>
+      <td>NEW</td>
+      <td>Timeliness</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>month in [1, 12]</td>
+      <td>NaN</td>
+      <td>100.0</td>
+      <td>NEW</td>
+      <td>Timeliness</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>invoice_id unique</td>
+      <td>58.2157</td>
+      <td>100.0</td>
+      <td>RESOLVED</td>
+      <td>Uniqueness</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>price &gt;= 0.01</td>
+      <td>98.0196</td>
+      <td>100.0</td>
+      <td>RESOLVED</td>
+      <td>Validity</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>product in allowed catalog</td>
+      <td>87.3529</td>
+      <td>100.0</td>
+      <td>RESOLVED</td>
+      <td>Validity</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>quantity &gt;= 1</td>
+      <td>97.0784</td>
+      <td>100.0</td>
+      <td>RESOLVED</td>
+      <td>Validity</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>revenue_bin in {Low, Medium, High}</td>
+      <td>NaN</td>
+      <td>100.0</td>
+      <td>NEW</td>
+      <td>Validity</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>total_revenue &gt; 0</td>
+      <td>NaN</td>
+      <td>100.0</td>
+      <td>NEW</td>
+      <td>Validity</td>
+      <td>PASS</td>
+    </tr>
+  </tbody>
+</table></body></html>

@@ -1,0 +1,9 @@
+﻿issue,cleaning_strategy,justification,action_type,rows_affected,log_requirement
+duplicate_invoice_id,Eliminar duplicados y conservar la primera ocurrencia,Las filas duplicadas inflan ingresos y afectan BO-1,drop,1159,Count removed
+negative_or_invalid_quantity,Eliminar filas con quantity < 1 o nulo,No es posible interpretar unidades vendidas negativas o faltantes,drop,120,Count dropped
+negative_or_invalid_price,Eliminar filas con price <= 0 o nulo,"No es válido analizar ventas con precio cero, negativo o faltante",drop,74,Count dropped
+null_customer_id,Eliminar filas con customer_id nulo,"No se puede asociar la transacción a un cliente, afectando BO-3 y BO-4",drop,144,Count dropped
+null_like_invoice_date,Eliminar filas con invoice_date nulo o null-like,Sin fecha válida no se puede hacer análisis temporal confiable (BO-2),drop,8,Count dropped
+unparseable_invoice_date,Eliminar filas cuya invoice_date no puede convertirse a fecha,Una fecha no interpretable no puede entrar de forma segura a transformación,drop,2,Count dropped
+future_invoice_date,Eliminar filas con invoice_date > 2023-12-31,La guía define que invoice_date debe estar dentro de 2023 (BO-2),drop,93,Count dropped
+inaccurate_total_revenue,Recalcular total_revenue = quantity * price,"Es un campo derivado; si quantity y price ya son válidos, se puede corregir sin perder la transacción",correct,115,Count corrected

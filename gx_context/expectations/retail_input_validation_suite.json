@@ -1,0 +1,167 @@
+{
+  "expectations": [
+    {
+      "id": "39854eeb-d01d-47c1-ac80-d55ebac31ff6",
+      "kwargs": {
+        "column": "customer_id"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "3e3a16cc-3c5c-47a3-a323-05409ba6aa83",
+      "kwargs": {
+        "column": "invoice_date"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "885df7d9-9694-400e-8f4e-199b52d6313b",
+      "kwargs": {
+        "column": "invoice_id"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_unique"
+    },
+    {
+      "id": "631dac3f-a51b-4b94-b5b8-dd2823566b1a",
+      "kwargs": {
+        "column": "quantity",
+        "min_value": 1.0
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "fdf387f4-a026-4466-ad72-be4bc589f3d1",
+      "kwargs": {
+        "column": "price",
+        "min_value": 0.01
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "56ad2a15-c329-48bf-8a3a-5b13eaffaaa3",
+      "kwargs": {
+        "column": "product",
+        "value_set": [
+          "Headphones",
+          "Keyboard",
+          "Laptop",
+          "Monitor",
+          "Mouse",
+          "Phone",
+          "Printer",
+          "Tablet"
+        ]
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_in_set"
+    },
+    {
+      "id": "7ef934a0-4012-4b2f-9942-bee2d218fbff",
+      "kwargs": {
+        "column": "_revenue_diff_abs",
+        "max_value": 0.01,
+        "min_value": 0.0
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "a597987e-d2f9-48d3-99a2-cd116f878cc0",
+      "kwargs": {
+        "column": "country",
+        "value_set": [
+          "Colombia",
+          "Ecuador",
+          "Peru",
+          "Chile"
+        ]
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_in_set"
+    },
+    {
+      "id": "712f3e0f-98bb-43a3-8cab-5038882720a5",
+      "kwargs": {
+        "column": "_invoice_date_str",
+        "regex": "^\\d{4}-\\d{2}-\\d{2}$"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_match_regex"
+    },
+    {
+      "id": "be9a9f47-8c2f-4379-ba8f-548783313017",
+      "kwargs": {
+        "column": "year",
+        "max_value": 2023.0,
+        "min_value": 2023.0
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "c3d07e91-699e-4bd0-9c95-e70225e1a6f2",
+      "kwargs": {
+        "column": "month",
+        "max_value": 12.0,
+        "min_value": 1.0
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "6365e71b-410b-4d91-80b3-0672a0375408",
+      "kwargs": {
+        "column": "revenue_bin",
+        "value_set": [
+          "Low",
+          "Medium",
+          "High"
+        ]
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_in_set"
+    },
+    {
+      "id": "c066f829-5d21-48bf-8a3e-8e8ee4c0b47d",
+      "kwargs": {
+        "column": "total_revenue",
+        "min_value": 0.01
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "1c880bf1-7435-47f9-bfdb-9240aa7f93aa",
+      "kwargs": {
+        "column": "invoice_id"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    }
+  ],
+  "id": "4bbc0d61-9976-4c3b-99ba-6f4b7a2f783f",
+  "meta": {
+    "great_expectations_version": "1.15.1"
+  },
+  "name": "retail_input_validation_suite",
+  "notes": null
+}

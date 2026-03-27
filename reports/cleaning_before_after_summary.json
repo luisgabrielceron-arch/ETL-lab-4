@@ -1,0 +1,93 @@
+{
+    "generated_at": "2026-03-26T08:19:10.036341",
+    "row_count_before": 5100,
+    "row_count_after": 3500,
+    "rows_dropped_total": 1600,
+    "rows_corrected_total": 115,
+    "null_counts_before": {
+        "invoice_id": 0,
+        "customer_id": 202,
+        "product": 0,
+        "quantity": 0,
+        "price": 0,
+        "total_revenue": 0,
+        "country": 0,
+        "invoice_date": 13
+    },
+    "null_counts_after": {
+        "invoice_id": 0,
+        "customer_id": 0,
+        "product": 0,
+        "quantity": 0,
+        "price": 0,
+        "total_revenue": 0,
+        "country": 0,
+        "invoice_date": 0
+    },
+    "rows_affected_per_reason": [
+        {
+            "issue": "duplicate_invoice_id",
+            "cleaning_strategy": "Eliminar duplicados y conservar la primera ocurrencia",
+            "justification": "Las filas duplicadas inflan ingresos y afectan BO-1",
+            "action_type": "drop",
+            "rows_affected": 1159,
+            "log_requirement": "Count removed"
+        },
+        {
+            "issue": "negative_or_invalid_quantity",
+            "cleaning_strategy": "Eliminar filas con quantity < 1 o nulo",
+            "justification": "No es posible interpretar unidades vendidas negativas o faltantes",
+            "action_type": "drop",
+            "rows_affected": 120,
+            "log_requirement": "Count dropped"
+        },
+        {
+            "issue": "negative_or_invalid_price",
+            "cleaning_strategy": "Eliminar filas con price <= 0 o nulo",
+            "justification": "No es válido analizar ventas con precio cero, negativo o faltante",
+            "action_type": "drop",
+            "rows_affected": 74,
+            "log_requirement": "Count dropped"
+        },
+        {
+            "issue": "null_customer_id",
+            "cleaning_strategy": "Eliminar filas con customer_id nulo",
+            "justification": "No se puede asociar la transacción a un cliente, afectando BO-3 y BO-4",
+            "action_type": "drop",
+            "rows_affected": 144,
+            "log_requirement": "Count dropped"
+        },
+        {
+            "issue": "null_like_invoice_date",
+            "cleaning_strategy": "Eliminar filas con invoice_date nulo o null-like",
+            "justification": "Sin fecha válida no se puede hacer análisis temporal confiable (BO-2)",
+            "action_type": "drop",
+            "rows_affected": 8,
+            "log_requirement": "Count dropped"
+        },
+        {
+            "issue": "unparseable_invoice_date",
+            "cleaning_strategy": "Eliminar filas cuya invoice_date no puede convertirse a fecha",
+            "justification": "Una fecha no interpretable no puede entrar de forma segura a transformación",
+            "action_type": "drop",
+            "rows_affected": 2,
+            "log_requirement": "Count dropped"
+        },
+        {
+            "issue": "future_invoice_date",
+            "cleaning_strategy": "Eliminar filas con invoice_date > 2023-12-31",
+            "justification": "La guía define que invoice_date debe estar dentro de 2023 (BO-2)",
+            "action_type": "drop",
+            "rows_affected": 93,
+            "log_requirement": "Count dropped"
+        },
+        {
+            "issue": "inaccurate_total_revenue",
+            "cleaning_strategy": "Recalcular total_revenue = quantity * price",
+            "justification": "Es un campo derivado; si quantity y price ya son válidos, se puede corregir sin perder la transacción",
+            "action_type": "correct",
+            "rows_affected": 115,
+            "log_requirement": "Count corrected"
+        }
+    ]
+}

@@ -1,0 +1,1115 @@
+{
+    "success": false,
+    "results": [
+        {
+            "success": false,
+            "expectation_config": {
+                "type": "expect_column_values_to_be_between",
+                "kwargs": {
+                    "column": "_invoice_date_iso",
+                    "min_value": "2023-01-01",
+                    "max_value": "2023-12-31",
+                    "batch_id": "retail_input_ds_20260325_123805_290622-retail_raw_asset_20260325_123805_290622"
+                },
+                "meta": {},
+                "id": "d8b6a98d-794a-4443-923b-77ab467c36e9",
+                "severity": "critical"
+            },
+            "result": {},
+            "meta": {},
+            "exception_info": {
+                "MetricConfigurationID(metric_name='column_values.between.condition', metric_domain_kwargs_id='9f7d40a6af46928df8f3a160d1e8d4c5', metric_value_kwargs_id='1e49360030fd3b426f7fa151eedcd823')": {
+                    "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Pasoseguro\\OneDrive - mipasoseguro.com.co\\Escritorio\\UAO- INTELIGENCIA ARTIFICIAL\\6 SEMESTRE\\ETL\\ETL_Lab_4\\.venv\\Lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 577, in _process_direct_and_bundled_metric_computation_configurations\n    metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        **metric_computation_configuration.metric_provider_kwargs\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"C:\\Users\\Pasoseguro\\OneDrive - mipasoseguro.com.co\\Escritorio\\UAO- INTELIGENCIA ARTIFICIAL\\6 SEMESTRE\\ETL\\ETL_Lab_4\\.venv\\Lib\\site-packages\\great_expectations\\expectations\\metrics\\metric_provider.py\", line 99, in inner_func\n    return metric_fn(*args, **kwargs)\n  File \"C:\\Users\\Pasoseguro\\OneDrive - mipasoseguro.com.co\\Escritorio\\UAO- INTELIGENCIA ARTIFICIAL\\6 SEMESTRE\\ETL\\ETL_Lab_4\\.venv\\Lib\\site-packages\\great_expectations\\expectations\\metrics\\map_metric_provider\\column_condition_partial.py\", line 117, in inner_func\n    meets_expectation_series = metric_fn(\n        cls,\n    ...<2 lines>...\n        _metrics=metrics,\n    )\n  File \"C:\\Users\\Pasoseguro\\OneDrive - mipasoseguro.com.co\\Escritorio\\UAO- INTELIGENCIA ARTIFICIAL\\6 SEMESTRE\\ETL\\ETL_Lab_4\\.venv\\Lib\\site-packages\\great_expectations\\expectations\\metrics\\column_map_metrics\\column_values_between.py\", line 127, in _pandas\n    return temp_column.map(is_between)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^\n  File \"C:\\Users\\Pasoseguro\\OneDrive - mipasoseguro.com.co\\Escritorio\\UAO- INTELIGENCIA ARTIFICIAL\\6 SEMESTRE\\ETL\\ETL_Lab_4\\.venv\\Lib\\site-packages\\pandas\\core\\series.py\", line 4675, in map\n    new_values = self._map_values(func, na_action=na_action)\n  File \"C:\\Users\\Pasoseguro\\OneDrive - mipasoseguro.com.co\\Escritorio\\UAO- INTELIGENCIA ARTIFICIAL\\6 SEMESTRE\\ETL\\ETL_Lab_4\\.venv\\Lib\\site-packages\\pandas\\core\\base.py\", line 1020, in _map_values\n    return arr.map(mapper, na_action=na_action)\n           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Pasoseguro\\OneDrive - mipasoseguro.com.co\\Escritorio\\UAO- INTELIGENCIA ARTIFICIAL\\6 SEMESTRE\\ETL\\ETL_Lab_4\\.venv\\Lib\\site-packages\\pandas\\core\\arrays\\base.py\", line 2744, in map\n    return map_array(self, mapper, na_action=na_action)\n  File \"C:\\Users\\Pasoseguro\\OneDrive - mipasoseguro.com.co\\Escritorio\\UAO- INTELIGENCIA ARTIFICIAL\\6 SEMESTRE\\ETL\\ETL_Lab_4\\.venv\\Lib\\site-packages\\pandas\\core\\algorithms.py\", line 1710, in map_array\n    return lib.map_infer(values, mapper)\n           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^\n  File \"pandas/_libs/lib.pyx\", line 3071, in pandas._libs.lib.map_infer\n  File \"C:\\Users\\Pasoseguro\\OneDrive - mipasoseguro.com.co\\Escritorio\\UAO- INTELIGENCIA ARTIFICIAL\\6 SEMESTRE\\ETL\\ETL_Lab_4\\.venv\\Lib\\site-packages\\great_expectations\\expectations\\metrics\\column_map_metrics\\column_values_between.py\", line 83, in is_between\n    raise TypeError(  # noqa: TRY003 # FIXME CoP\n        \"Column values, min_value, and max_value must either be None or of the same type.\"  # noqa: E501 # FIXME CoP\n    )\nTypeError: Column values, min_value, and max_value must either be None or of the same type.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Pasoseguro\\OneDrive - mipasoseguro.com.co\\Escritorio\\UAO- INTELIGENCIA ARTIFICIAL\\6 SEMESTRE\\ETL\\ETL_Lab_4\\.venv\\Lib\\site-packages\\great_expectations\\validator\\validation_graph.py\", line 290, in _resolve\n    self._execution_engine.resolve_metrics(\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^\n        metrics_to_resolve=computable_metrics,\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        metrics=metrics,\n        ^^^^^^^^^^^^^^^^\n        runtime_configuration=runtime_configuration,\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"C:\\Users\\Pasoseguro\\OneDrive - mipasoseguro.com.co\\Escritorio\\UAO- INTELIGENCIA ARTIFICIAL\\6 SEMESTRE\\ETL\\ETL_Lab_4\\.venv\\Lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 294, in resolve_metrics\n    return self._process_direct_and_bundled_metric_computation_configurations(\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^\n        metric_fn_direct_configurations=metric_fn_direct_configurations,\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        metric_fn_bundle_configurations=metric_fn_bundle_configurations,\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"C:\\Users\\Pasoseguro\\OneDrive - mipasoseguro.com.co\\Escritorio\\UAO- INTELIGENCIA ARTIFICIAL\\6 SEMESTRE\\ETL\\ETL_Lab_4\\.venv\\Lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 582, in _process_direct_and_bundled_metric_computation_configurations\n    raise gx_exceptions.MetricResolutionError(\n    ...<2 lines>...\n    ) from e\ngreat_expectations.exceptions.exceptions.MetricResolutionError: Column values, min_value, and max_value must either be None or of the same type.\n",
+                    "exception_message": "Column values, min_value, and max_value must either be None or of the same type.",
+                    "raised_exception": true
+                }
+            }
+        },
+        {
+            "success": false,
+            "expectation_config": {
+                "type": "expect_column_values_to_not_be_null",
+                "kwargs": {
+                    "batch_id": "retail_input_ds_20260325_123805_290622-retail_raw_asset_20260325_123805_290622",
+                    "column": "customer_id"
+                },
+                "meta": {},
+                "id": "11847f6d-0278-4fbf-88ac-a28271788fa2",
+                "severity": "critical"
+            },
+            "result": {
+                "element_count": 5100,
+                "unexpected_count": 202,
+                "unexpected_percent": 3.96078431372549,
+                "partial_unexpected_list": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "partial_unexpected_counts": [
+                    {
+                        "value": null,
+                        "count": 1
+                    },
+                    {
+                        "value": null,
+                        "count": 1
+                    },
+                    {
+                        "value": null,
+                        "count": 1
+                    },
+                    {
+                        "value": null,
+                        "count": 1
+                    },
+                    {
+                        "value": null,
+                        "count": 1
+                    },
+                    {
+                        "value": null,
+                        "count": 1
+                    },
+                    {
+                        "value": null,
+                        "count": 1
+                    },
+                    {
+                        "value": null,
+                        "count": 1
+                    },
+                    {
+                        "value": null,
+                        "count": 1
+                    },
+                    {
+                        "value": null,
+                        "count": 1
+                    },
+                    {
+                        "value": null,
+                        "count": 1
+                    },
+                    {
+                        "value": null,
+                        "count": 1
+                    },
+                    {
+                        "value": null,
+                        "count": 1
+                    },
+                    {
+                        "value": null,
+                        "count": 1
+                    },
+                    {
+                        "value": null,
+                        "count": 1
+                    },
+                    {
+                        "value": null,
+                        "count": 1
+                    },
+                    {
+                        "value": null,
+                        "count": 1
+                    },
+                    {
+                        "value": null,
+                        "count": 1
+                    },
+                    {
+                        "value": null,
+                        "count": 1
+                    },
+                    {
+                        "value": null,
+                        "count": 1
+                    }
+                ],
+                "partial_unexpected_index_list": [
+                    12,
+                    14,
+                    16,
+                    20,
+                    52,
+                    65,
+                    77,
+                    80,
+                    100,
+                    120,
+                    124,
+                    141,
+                    280,
+                    324,
+                    342,
+                    384,
+                    416,
+                    449,
+                    460,
+                    471
+                ]
+            },
+            "meta": {},
+            "exception_info": {
+                "raised_exception": false,
+                "exception_traceback": null,
+                "exception_message": null
+            }
+        },
+        {
+            "success": false,
+            "expectation_config": {
+                "type": "expect_column_values_to_not_be_null",
+                "kwargs": {
+                    "batch_id": "retail_input_ds_20260325_123805_290622-retail_raw_asset_20260325_123805_290622",
+                    "column": "invoice_date"
+                },
+                "meta": {},
+                "id": "d7aae342-ffe2-44ba-853d-2e3e8f6f5cbf",
+                "severity": "critical"
+            },
+            "result": {
+                "element_count": 5100,
+                "unexpected_count": 13,
+                "unexpected_percent": 0.25490196078431376,
+                "partial_unexpected_list": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "partial_unexpected_counts": [
+                    {
+                        "value": null,
+                        "count": 13
+                    }
+                ],
+                "partial_unexpected_index_list": [
+                    47,
+                    889,
+                    1229,
+                    1465,
+                    1621,
+                    1827,
+                    3216,
+                    3349,
+                    3473,
+                    3562,
+                    3894,
+                    4140,
+                    4819
+                ]
+            },
+            "meta": {},
+            "exception_info": {
+                "raised_exception": false,
+                "exception_traceback": null,
+                "exception_message": null
+            }
+        },
+        {
+            "success": false,
+            "expectation_config": {
+                "type": "expect_column_values_to_match_regex",
+                "kwargs": {
+                    "batch_id": "retail_input_ds_20260325_123805_290622-retail_raw_asset_20260325_123805_290622",
+                    "column": "invoice_date",
+                    "regex": "^\\d{4}-\\d{2}-\\d{2}$"
+                },
+                "meta": {},
+                "id": "1e9d6340-73fd-44ed-bd09-ebdd2bcb320c",
+                "severity": "critical"
+            },
+            "result": {
+                "element_count": 5100,
+                "unexpected_count": 178,
+                "unexpected_percent": 3.4991153921761353,
+                "partial_unexpected_list": [
+                    "14-09-2023",
+                    "23-02-2023",
+                    "2023/05/15",
+                    "2023/05/15",
+                    "23-12-2023",
+                    "01-04-2023",
+                    "2023/05/15",
+                    "2023/05/15",
+                    "2023/05/15",
+                    "2023/05/15",
+                    "15-03-2023",
+                    "02-03-2023",
+                    "2023/05/15",
+                    "2023/05/15",
+                    "04-12-2023",
+                    "2023/05/15",
+                    "2023/05/15",
+                    "2023/05/15",
+                    "2023/05/15",
+                    "2023/05/15"
+                ],
+                "missing_count": 13,
+                "missing_percent": 0.25490196078431376,
+                "unexpected_percent_total": 3.4901960784313726,
+                "unexpected_percent_nonmissing": 3.4991153921761353,
+                "partial_unexpected_counts": [
+                    {
+                        "value": "2023/05/15",
+                        "count": 13
+                    },
+                    {
+                        "value": "01-04-2023",
+                        "count": 1
+                    },
+                    {
+                        "value": "02-03-2023",
+                        "count": 1
+                    },
+                    {
+                        "value": "04-12-2023",
+                        "count": 1
+                    },
+                    {
+                        "value": "14-09-2023",
+                        "count": 1
+                    },
+                    {
+                        "value": "15-03-2023",
+                        "count": 1
+                    },
+                    {
+                        "value": "23-02-2023",
+                        "count": 1
+                    },
+                    {
+                        "value": "23-12-2023",
+                        "count": 1
+                    }
+                ],
+                "partial_unexpected_index_list": [
+                    3,
+                    13,
+                    72,
+                    107,
+                    193,
+                    226,
+                    255,
+                    264,
+                    269,
+                    299,
+                    313,
+                    317,
+                    351,
+                    355,
+                    363,
+                    409,
+                    464,
+                    483,
+                    555,
+                    563
+                ]
+            },
+            "meta": {},
+            "exception_info": {
+                "raised_exception": false,
+                "exception_traceback": null,
+                "exception_message": null
+            }
+        },
+        {
+            "success": false,
+            "expectation_config": {
+                "type": "expect_column_values_to_be_unique",
+                "kwargs": {
+                    "batch_id": "retail_input_ds_20260325_123805_290622-retail_raw_asset_20260325_123805_290622",
+                    "column": "invoice_id"
+                },
+                "meta": {},
+                "id": "a2a5ad89-6946-4bd9-bc98-8df864e7e88c",
+                "severity": "critical"
+            },
+            "result": {
+                "element_count": 5100,
+                "unexpected_count": 2131,
+                "unexpected_percent": 41.78431372549019,
+                "partial_unexpected_list": [
+                    21238,
+                    24727,
+                    23701,
+                    22780,
+                    27398,
+                    22828,
+                    27480,
+                    29496,
+                    25565,
+                    27226,
+                    26919,
+                    25585,
+                    27927,
+                    27016,
+                    25086,
+                    29456,
+                    29009,
+                    26468,
+                    29080,
+                    25951
+                ],
+                "missing_count": 0,
+                "missing_percent": 0.0,
+                "unexpected_percent_total": 41.78431372549019,
+                "unexpected_percent_nonmissing": 41.78431372549019,
+                "partial_unexpected_counts": [
+                    {
+                        "value": 21238,
+                        "count": 1
+                    },
+                    {
+                        "value": 22780,
+                        "count": 1
+                    },
+                    {
+                        "value": 22828,
+                        "count": 1
+                    },
+                    {
+                        "value": 23701,
+                        "count": 1
+                    },
+                    {
+                        "value": 24727,
+                        "count": 1
+                    },
+                    {
+                        "value": 25086,
+                        "count": 1
+                    },
+                    {
+                        "value": 25565,
+                        "count": 1
+                    },
+                    {
+                        "value": 25585,
+                        "count": 1
+                    },
+                    {
+                        "value": 25951,
+                        "count": 1
+                    },
+                    {
+                        "value": 26468,
+                        "count": 1
+                    },
+                    {
+                        "value": 26919,
+                        "count": 1
+                    },
+                    {
+                        "value": 27016,
+                        "count": 1
+                    },
+                    {
+                        "value": 27226,
+                        "count": 1
+                    },
+                    {
+                        "value": 27398,
+                        "count": 1
+                    },
+                    {
+                        "value": 27480,
+                        "count": 1
+                    },
+                    {
+                        "value": 27927,
+                        "count": 1
+                    },
+                    {
+                        "value": 29009,
+                        "count": 1
+                    },
+                    {
+                        "value": 29080,
+                        "count": 1
+                    },
+                    {
+                        "value": 29456,
+                        "count": 1
+                    },
+                    {
+                        "value": 29496,
+                        "count": 1
+                    }
+                ],
+                "partial_unexpected_index_list": [
+                    1,
+                    3,
+                    7,
+                    8,
+                    9,
+                    14,
+                    17,
+                    18,
+                    22,
+                    36,
+                    38,
+                    39,
+                    43,
+                    44,
+                    46,
+                    47,
+                    53,
+                    56,
+                    57,
+                    58
+                ]
+            },
+            "meta": {},
+            "exception_info": {
+                "raised_exception": false,
+                "exception_traceback": null,
+                "exception_message": null
+            }
+        },
+        {
+            "success": false,
+            "expectation_config": {
+                "type": "expect_column_values_to_be_between",
+                "kwargs": {
+                    "batch_id": "retail_input_ds_20260325_123805_290622-retail_raw_asset_20260325_123805_290622",
+                    "column": "quantity",
+                    "min_value": 1.0
+                },
+                "meta": {},
+                "id": "2ba35cea-5825-45e3-9a92-f7741aad0eaf",
+                "severity": "critical"
+            },
+            "result": {
+                "element_count": 5100,
+                "unexpected_count": 149,
+                "unexpected_percent": 2.9215686274509807,
+                "partial_unexpected_list": [
+                    -2,
+                    -1,
+                    -2,
+                    -1,
+                    -1,
+                    -3,
+                    -3,
+                    -2,
+                    -1,
+                    -3,
+                    -1,
+                    -1,
+                    -3,
+                    -3,
+                    -2,
+                    -4,
+                    -1,
+                    -2,
+                    -1,
+                    -4
+                ],
+                "missing_count": 0,
+                "missing_percent": 0.0,
+                "unexpected_percent_total": 2.9215686274509807,
+                "unexpected_percent_nonmissing": 2.9215686274509807,
+                "partial_unexpected_counts": [
+                    {
+                        "value": -1,
+                        "count": 8
+                    },
+                    {
+                        "value": -3,
+                        "count": 5
+                    },
+                    {
+                        "value": -2,
+                        "count": 5
+                    },
+                    {
+                        "value": -4,
+                        "count": 2
+                    }
+                ],
+                "partial_unexpected_index_list": [
+                    33,
+                    44,
+                    50,
+                    82,
+                    147,
+                    168,
+                    218,
+                    234,
+                    257,
+                    268,
+                    277,
+                    305,
+                    321,
+                    365,
+                    390,
+                    431,
+                    439,
+                    461,
+                    480,
+                    522
+                ]
+            },
+            "meta": {},
+            "exception_info": {
+                "raised_exception": false,
+                "exception_traceback": null,
+                "exception_message": null
+            }
+        },
+        {
+            "success": false,
+            "expectation_config": {
+                "type": "expect_column_values_to_be_between",
+                "kwargs": {
+                    "batch_id": "retail_input_ds_20260325_123805_290622-retail_raw_asset_20260325_123805_290622",
+                    "column": "price",
+                    "min_value": 0.01
+                },
+                "meta": {},
+                "id": "d2c7168d-0e8e-4194-a5b4-aed02b29058c",
+                "severity": "critical"
+            },
+            "result": {
+                "element_count": 5100,
+                "unexpected_count": 101,
+                "unexpected_percent": 1.980392156862745,
+                "partial_unexpected_list": [
+                    -83.02658943803908,
+                    -63.01014568020967,
+                    -30.047680091920107,
+                    -31.722670706321743,
+                    -74.73031861213859,
+                    -42.73461385557504,
+                    -8.404028285783653,
+                    -47.473248414236885,
+                    -23.62398962296769,
+                    -50.45665343755744,
+                    -69.40086437216225,
+                    -69.83550270125954,
+                    -50.432199660043246,
+                    -65.54709453271963,
+                    -41.87306779109021,
+                    -44.36061613463463,
+                    -60.51181158309661,
+                    -52.96413799275991,
+                    -16.146582881139274,
+                    -69.95654856681801
+                ],
+                "missing_count": 0,
+                "missing_percent": 0.0,
+                "unexpected_percent_total": 1.980392156862745,
+                "unexpected_percent_nonmissing": 1.980392156862745,
+                "partial_unexpected_counts": [
+                    {
+                        "value": -83.02658943803908,
+                        "count": 1
+                    },
+                    {
+                        "value": -74.73031861213859,
+                        "count": 1
+                    },
+                    {
+                        "value": -69.95654856681801,
+                        "count": 1
+                    },
+                    {
+                        "value": -69.83550270125954,
+                        "count": 1
+                    },
+                    {
+                        "value": -69.40086437216225,
+                        "count": 1
+                    },
+                    {
+                        "value": -65.54709453271963,
+                        "count": 1
+                    },
+                    {
+                        "value": -63.01014568020967,
+                        "count": 1
+                    },
+                    {
+                        "value": -60.51181158309661,
+                        "count": 1
+                    },
+                    {
+                        "value": -52.96413799275991,
+                        "count": 1
+                    },
+                    {
+                        "value": -50.45665343755744,
+                        "count": 1
+                    },
+                    {
+                        "value": -50.432199660043246,
+                        "count": 1
+                    },
+                    {
+                        "value": -47.473248414236885,
+                        "count": 1
+                    },
+                    {
+                        "value": -44.36061613463463,
+                        "count": 1
+                    },
+                    {
+                        "value": -42.73461385557504,
+                        "count": 1
+                    },
+                    {
+                        "value": -41.87306779109021,
+                        "count": 1
+                    },
+                    {
+                        "value": -31.722670706321743,
+                        "count": 1
+                    },
+                    {
+                        "value": -30.047680091920107,
+                        "count": 1
+                    },
+                    {
+                        "value": -23.62398962296769,
+                        "count": 1
+                    },
+                    {
+                        "value": -16.146582881139274,
+                        "count": 1
+                    },
+                    {
+                        "value": -8.404028285783653,
+                        "count": 1
+                    }
+                ],
+                "partial_unexpected_index_list": [
+                    26,
+                    41,
+                    236,
+                    313,
+                    332,
+                    400,
+                    443,
+                    449,
+                    500,
+                    531,
+                    568,
+                    683,
+                    710,
+                    715,
+                    717,
+                    852,
+                    891,
+                    903,
+                    908,
+                    969
+                ]
+            },
+            "meta": {},
+            "exception_info": {
+                "raised_exception": false,
+                "exception_traceback": null,
+                "exception_message": null
+            }
+        },
+        {
+            "success": false,
+            "expectation_config": {
+                "type": "expect_column_values_to_be_in_set",
+                "kwargs": {
+                    "batch_id": "retail_input_ds_20260325_123805_290622-retail_raw_asset_20260325_123805_290622",
+                    "column": "product",
+                    "value_set": [
+                        "Laptop",
+                        "Tablet",
+                        "Smartphone",
+                        "Headphones",
+                        "Keyboard",
+                        "Mouse",
+                        "Monitor",
+                        "Printer"
+                    ]
+                },
+                "meta": {},
+                "id": "6d993256-0bcc-4a15-a830-d0f35c0a2e7b",
+                "severity": "critical"
+            },
+            "result": {
+                "element_count": 5100,
+                "unexpected_count": 645,
+                "unexpected_percent": 12.647058823529411,
+                "partial_unexpected_list": [
+                    "Phone",
+                    "Phone",
+                    "Phone",
+                    "Phone",
+                    "Phone",
+                    "Phone",
+                    "Phone",
+                    "Phone",
+                    "Phone",
+                    "Phone",
+                    "Phone",
+                    "Phone",
+                    "Phone",
+                    "Phone",
+                    "Phone",
+                    "Phone",
+                    "Phone",
+                    "Phone",
+                    "Phone",
+                    "Phone"
+                ],
+                "missing_count": 0,
+                "missing_percent": 0.0,
+                "unexpected_percent_total": 12.647058823529411,
+                "unexpected_percent_nonmissing": 12.647058823529411,
+                "partial_unexpected_counts": [
+                    {
+                        "value": "Phone",
+                        "count": 20
+                    }
+                ],
+                "partial_unexpected_index_list": [
+                    5,
+                    10,
+                    15,
+                    58,
+                    59,
+                    65,
+                    67,
+                    96,
+                    115,
+                    117,
+                    118,
+                    122,
+                    127,
+                    134,
+                    136,
+                    141,
+                    187,
+                    193,
+                    206,
+                    212
+                ]
+            },
+            "meta": {},
+            "exception_info": {
+                "raised_exception": false,
+                "exception_traceback": null,
+                "exception_message": null
+            }
+        },
+        {
+            "success": false,
+            "expectation_config": {
+                "type": "expect_column_values_to_be_between",
+                "kwargs": {
+                    "batch_id": "retail_input_ds_20260325_123805_290622-retail_raw_asset_20260325_123805_290622",
+                    "column": "_revenue_diff_abs",
+                    "min_value": 0.0,
+                    "max_value": 0.01
+                },
+                "meta": {},
+                "id": "0203c31f-02fa-4626-bca0-117e1171f741",
+                "severity": "critical"
+            },
+            "result": {
+                "element_count": 5100,
+                "unexpected_count": 148,
+                "unexpected_percent": 2.9019607843137254,
+                "partial_unexpected_list": [
+                    29.250463371765477,
+                    1604.52,
+                    100.00000000000001,
+                    100.0,
+                    50.0,
+                    995.7,
+                    1045.5100000000002,
+                    86.20999999999958,
+                    12754.8,
+                    3550.0,
+                    952.56,
+                    373.89999999999986,
+                    728.1399999999999,
+                    200.0,
+                    187.1800000000003,
+                    1466.42,
+                    100.0,
+                    858.6400000000001,
+                    1711.5,
+                    1371.8000000000002
+                ],
+                "missing_count": 0,
+                "missing_percent": 0.0,
+                "unexpected_percent_total": 2.9019607843137254,
+                "unexpected_percent_nonmissing": 2.9019607843137254,
+                "partial_unexpected_counts": [
+                    {
+                        "value": 100.0,
+                        "count": 2
+                    },
+                    {
+                        "value": 29.250463371765477,
+                        "count": 1
+                    },
+                    {
+                        "value": 50.0,
+                        "count": 1
+                    },
+                    {
+                        "value": 86.20999999999958,
+                        "count": 1
+                    },
+                    {
+                        "value": 100.00000000000001,
+                        "count": 1
+                    },
+                    {
+                        "value": 187.1800000000003,
+                        "count": 1
+                    },
+                    {
+                        "value": 200.0,
+                        "count": 1
+                    },
+                    {
+                        "value": 373.89999999999986,
+                        "count": 1
+                    },
+                    {
+                        "value": 728.1399999999999,
+                        "count": 1
+                    },
+                    {
+                        "value": 858.6400000000001,
+                        "count": 1
+                    },
+                    {
+                        "value": 952.56,
+                        "count": 1
+                    },
+                    {
+                        "value": 995.7,
+                        "count": 1
+                    },
+                    {
+                        "value": 1045.5100000000002,
+                        "count": 1
+                    },
+                    {
+                        "value": 1371.8000000000002,
+                        "count": 1
+                    },
+                    {
+                        "value": 1466.42,
+                        "count": 1
+                    },
+                    {
+                        "value": 1604.52,
+                        "count": 1
+                    },
+                    {
+                        "value": 1711.5,
+                        "count": 1
+                    },
+                    {
+                        "value": 3550.0,
+                        "count": 1
+                    },
+                    {
+                        "value": 12754.8,
+                        "count": 1
+                    }
+                ],
+                "partial_unexpected_index_list": [
+                    26,
+                    53,
+                    94,
+                    204,
+                    217,
+                    244,
+                    260,
+                    262,
+                    355,
+                    375,
+                    385,
+                    458,
+                    520,
+                    542,
+                    569,
+                    584,
+                    645,
+                    653,
+                    712,
+                    744
+                ]
+            },
+            "meta": {},
+            "exception_info": {
+                "raised_exception": false,
+                "exception_traceback": null,
+                "exception_message": null
+            }
+        },
+        {
+            "success": false,
+            "expectation_config": {
+                "type": "expect_column_values_to_be_in_set",
+                "kwargs": {
+                    "batch_id": "retail_input_ds_20260325_123805_290622-retail_raw_asset_20260325_123805_290622",
+                    "column": "country",
+                    "value_set": [
+                        "Colombia",
+                        "Ecuador",
+                        "Peru",
+                        "Chile"
+                    ]
+                },
+                "meta": {},
+                "id": "43968208-064d-447a-a721-9bd1ae76bfa2",
+                "severity": "critical"
+            },
+            "result": {
+                "element_count": 5100,
+                "unexpected_count": 2211,
+                "unexpected_percent": 43.35294117647059,
+                "partial_unexpected_list": [
+                    "colombia",
+                    "colombia",
+                    "colombia",
+                    "colombia",
+                    "ecuador",
+                    "ecuador",
+                    "CO",
+                    "colombia",
+                    "ecuador",
+                    "CO",
+                    "ecuador",
+                    "ecuador",
+                    "ecuador",
+                    "ecuador",
+                    "colombia",
+                    "CO",
+                    "colombia",
+                    "ecuador",
+                    "colombia",
+                    "ecuador"
+                ],
+                "missing_count": 0,
+                "missing_percent": 0.0,
+                "unexpected_percent_total": 43.35294117647059,
+                "unexpected_percent_nonmissing": 43.35294117647059,
+                "partial_unexpected_counts": [
+                    {
+                        "value": "ecuador",
+                        "count": 9
+                    },
+                    {
+                        "value": "colombia",
+                        "count": 8
+                    },
+                    {
+                        "value": "CO",
+                        "count": 3
+                    }
+                ],
+                "partial_unexpected_index_list": [
+                    1,
+                    2,
+                    7,
+                    10,
+                    12,
+                    13,
+                    15,
+                    16,
+                    17,
+                    20,
+                    22,
+                    27,
+                    31,
+                    33,
+                    36,
+                    37,
+                    42,
+                    46,
+                    47,
+                    48
+                ]
+            },
+            "meta": {},
+            "exception_info": {
+                "raised_exception": false,
+                "exception_traceback": null,
+                "exception_message": null
+            }
+        }
+    ],
+    "suite_name": "retail_input_validation_suite",
+    "suite_parameters": {},
+    "statistics": {
+        "evaluated_expectations": 10,
+        "successful_expectations": 0,
+        "unsuccessful_expectations": 10,
+        "success_percent": 0.0
+    },
+    "meta": {
+        "great_expectations_version": "1.15.1",
+        "batch_spec": {
+            "batch_data": "PandasDataFrame"
+        },
+        "batch_markers": {
+            "ge_load_time": "20260325T173805.782253Z",
+            "pandas_data_fingerprint": "541d6a8931665b9efc50f0843e16faae"
+        },
+        "active_batch_definition": {
+            "datasource_name": "retail_input_ds_20260325_123805_290622",
+            "data_connector_name": "fluent",
+            "data_asset_name": "retail_raw_asset_20260325_123805_290622",
+            "batch_identifiers": {
+                "dataframe": "<DATAFRAME>"
+            }
+        },
+        "validation_id": "e7040534-1076-4570-8c9d-019f38e0755e",
+        "checkpoint_id": null,
+        "run_id": {
+            "run_name": null,
+            "run_time": "2026-03-25T12:38:05.969342-05:00"
+        },
+        "validation_time": "2026-03-25T17:38:05.969342+00:00",
+        "batch_parameters": {
+            "dataframe": "<DATAFRAME>"
+        }
+    },
+    "id": null
+}

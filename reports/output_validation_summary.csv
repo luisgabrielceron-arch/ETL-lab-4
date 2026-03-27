@@ -1,0 +1,16 @@
+﻿expectation_label,expectation_type,column,dimension,actual_result_output,success_output,pass_percent_output,failure_percent_output
+Custom: total_revenue == quantity * price (tol ±0.01),expect_column_values_to_be_between,_revenue_diff_abs,Accuracy,PASS,True,100.0,0.0
+customer_id not null,expect_column_values_to_not_be_null,customer_id,Completeness,PASS,True,100.0,0.0
+invoice_date not null,expect_column_values_to_not_be_null,invoice_date,Completeness,PASS,True,100.0,0.0
+invoice_id not null,expect_column_values_to_not_be_null,invoice_id,Completeness,PASS,True,100.0,0.0
+"country in {Colombia, Ecuador, Peru, Chile}",expect_column_values_to_be_in_set,country,Consistency,PASS,True,100.0,0.0
+invoice_date matches YYYY-MM-DD,expect_column_values_to_match_regex,_invoice_date_str,Timeliness,PASS,True,100.0,0.0
+invoice_date parsed as datetime type,manual_dtype_check,invoice_date,Timeliness,PASS,True,100.0,0.0
+invoice_date within 2023,expect_column_values_to_be_between,year,Timeliness,PASS,True,100.0,0.0
+"month in [1, 12]",expect_column_values_to_be_between,month,Timeliness,PASS,True,100.0,0.0
+invoice_id unique,expect_column_values_to_be_unique,invoice_id,Uniqueness,PASS,True,100.0,0.0
+price >= 0.01,expect_column_values_to_be_between,price,Validity,PASS,True,100.0,0.0
+product in allowed catalog,expect_column_values_to_be_in_set,product,Validity,PASS,True,100.0,0.0
+quantity >= 1,expect_column_values_to_be_between,quantity,Validity,PASS,True,100.0,0.0
+"revenue_bin in {Low, Medium, High}",expect_column_values_to_be_in_set,revenue_bin,Validity,PASS,True,100.0,0.0
+total_revenue > 0,expect_column_values_to_be_between,total_revenue,Validity,PASS,True,100.0,0.0

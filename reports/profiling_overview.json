@@ -1,0 +1,113 @@
+{
+    "dataset_path": "C:\\Users\\Pasoseguro\\OneDrive - mipasoseguro.com.co\\Escritorio\\UAO- INTELIGENCIA ARTIFICIAL\\6 SEMESTRE\\ETL\\ETL_Lab_4\\data\\raw\\retail_etl_dataset.csv",
+    "generated_at": "2026-03-25T12:30:19.202864",
+    "shape": {
+        "rows": 5100,
+        "columns": 8
+    },
+    "dtypes": {
+        "invoice_id": "int64",
+        "customer_id": "float64",
+        "product": "str",
+        "quantity": "int64",
+        "price": "float64",
+        "total_revenue": "float64",
+        "country": "str",
+        "invoice_date": "str"
+    },
+    "dataset_memory_mb": 1.0192,
+    "missing_summary": [
+        {
+            "column": "invoice_id",
+            "missing_count": 0,
+            "missing_pct": 0.0
+        },
+        {
+            "column": "customer_id",
+            "missing_count": 202,
+            "missing_pct": 3.9608
+        },
+        {
+            "column": "product",
+            "missing_count": 0,
+            "missing_pct": 0.0
+        },
+        {
+            "column": "quantity",
+            "missing_count": 0,
+            "missing_pct": 0.0
+        },
+        {
+            "column": "price",
+            "missing_count": 0,
+            "missing_pct": 0.0
+        },
+        {
+            "column": "total_revenue",
+            "missing_count": 0,
+            "missing_pct": 0.0
+        },
+        {
+            "column": "country",
+            "missing_count": 0,
+            "missing_pct": 0.0
+        },
+        {
+            "column": "invoice_date",
+            "missing_count": 13,
+            "missing_pct": 0.2549
+        }
+    ],
+    "categorical_cardinality": {
+        "product": 8,
+        "country": 7,
+        "invoice_date_formats": 5
+    },
+    "numeric_stats": {
+        "quantity": {
+            "min": -4,
+            "max": 9,
+            "mean": 4.776470588235294,
+            "median": 5.0,
+            "std": 2.825415445524679
+        },
+        "price": {
+            "min": -96.6166180197216,
+            "max": 999.51,
+            "mean": 496.22995183335837,
+            "median": 497.44,
+            "std": 291.65427586657546
+        },
+        "total_revenue": {
+            "min": -6719.28,
+            "max": 11294.13,
+            "mean": 2332.439496078431,
+            "median": 1850.025,
+            "std": 2184.9140938919822
+        }
+    },
+    "duplicate_invoice_metrics": {
+        "duplicate_invoice_id_rows_including_first": 2131,
+        "duplicate_invoice_id_excess_rows": 1159,
+        "duplicate_distinct_invoice_ids": 972
+    },
+    "revenue_mismatch_count": 148,
+    "invoice_date_format_distribution": {
+        "YYYY-MM-DD": 4909,
+        "YYYY/MM/DD": 98,
+        "DD-MM-YYYY": 78,
+        "null_like": 13,
+        "other": 2
+    },
+    "invoice_date_timeliness": {
+        "future_invoice_date_count": 128,
+        "null_like_invoice_date_count": 13
+    },
+    "great_expectations_registration": {
+        "registered": true,
+        "error": null,
+        "datasource_name": "etl_lab_pandas_20260325_123015",
+        "asset_name": "retail_raw_asset_20260325_123015",
+        "api_mode": "fluent_data_sources"
+    }
+}
