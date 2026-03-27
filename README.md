@@ -15,6 +15,47 @@ Los objetivos de negocio que guían el desarrollo son los siguientes:
 
 ---
 
+# 2. Instalación y ejecución
+
+## 2.1. Requisitos
+
+- Python 3.11+ recomendado
+- Dependencias definidas en `requirements.txt`
+
+## 2.2. Crear entorno virtual e instalar dependencias (Windows / PowerShell)
+
+```powershell
+cd C:\Users\LENOVO\OneDrive\Documentos\ETL\ETL-lab-4
+python -m venv .venv
+.\.venv\Scripts\activate
+python -m pip install --upgrade pip
+python -m pip install -r .\requirements.txt
+```
+
+## 2.3. Ejecutar el pipeline completo (A → I)
+
+```powershell
+python .\src\main.py
+```
+
+Este comando ejecuta cada etapa como un subproceso independiente (para evitar conflictos de configuración de Great Expectations) y genera un reporte de ejecución en:
+
+- `reports/pipeline_run_<run_id>.json`
+
+## 2.4. Ejecutar etapas por separado (opcional)
+
+```powershell
+python .\src\extract.py
+python .\src\validate_input.py
+python .\src\quality_analysis.py
+python .\src\clean.py
+python .\src\transform.py
+python .\src\validate_output.py
+python .\src\dimensional_model.py
+python .\src\load_dw.py
+python .\src\analysis.py
+```
+
 # 3. Task A — Extract & Profiling
 
 ## 3.1. Qué pide la guía
@@ -442,4 +483,137 @@ Esta fase generó los siguientes archivos:
 - `data/processed/retail_transformed.csv`
 - `reports/transformation_summary.json`
 - `reports/transformation_summary.md`
+
+---
+
+# 8. Task F — Post-Transformation Validation (Great Expectations)
+
+## 8.1. Objetivo
+
+En esta fase la Expectation Suite funciona como un **contrato de calidad**: todas las expectativas deben **PASAR** sobre el dataset transformado (`retail_transformed.csv`). Si alguna falla, el pipeline no debe continuar a carga.
+
+## 8.2. Qué se implementó
+
+Se desarrolló `src/validate_output.py`, que:
+
+- carga `data/processed/retail_transformed.csv`
+- reutiliza el nombre de la suite y agrega expectativas específicas del output (por ejemplo: `month` en `[1, 12]`, `revenue_bin` en `{Low, Medium, High}`, `invoice_date` parseada como datetime, etc.)
+- genera una tabla de comparación de pass% entre raw vs output
+- calcula DQ score de entrada y de salida
+
+## 8.3. Evidencias generadas
+
+- `reports/output_validation_results.json`
+- `reports/output_validation_summary.csv`
+- `reports/output_validation_comparison_table.csv`
+- `reports/output_validation_comparison_table.md`
+- `reports/output_validation_comparison_table.html`
+- `reports/dq_scores.json`
+- `reports/dq_scores.md`
+
+Además, Great Expectations genera Data Docs locales en:
+
+- `gx_context/uncommitted/data_docs/local_site/index.html`
+
+---
+
+# 9. Task G — Dimensional Modeling (Star Schema)
+
+## 9.1. Objetivo
+
+Diseñar y materializar un **esquema estrella** para analítica retail, con una tabla de hechos `fact_sales` y dimensiones para producto, cliente, ubicación y fechas.
+
+## 9.2. Qué se implementó
+
+Se desarrolló `src/dimensional_model.py`, que construye:
+
+- `dim_date`: todas las fechas del 2023 (no solo las presentes en el dataset)
+- `dim_product`: productos únicos con `product_id` surrogate
+- `dim_customer`: clientes únicos con `customer_id`
+- `dim_location`: países únicos con `location_id` surrogate
+- `fact_sales`: hechos con claves foráneas a las dimensiones
+
+La construcción de `fact_sales` incluye validación para evitar llaves foráneas nulas o mapeos incompletos.
+
+## 9.3. Evidencias generadas
+
+- `data/processed/dim_date.csv`
+- `data/processed/dim_product.csv`
+- `data/processed/dim_customer.csv`
+- `data/processed/dim_location.csv`
+- `data/processed/fact_sales.csv`
+- `reports/model_description.md`
+
+---
+
+# 10. Task H — Load (SQLite Data Warehouse)
+
+## 10.1. Objetivo
+
+Cargar las tablas del esquema estrella en un Data Warehouse local SQLite, respetando el orden de carga para mantener integridad referencial.
+
+## 10.2. Qué se implementó
+
+Se desarrolló `src/load_dw.py`, que carga (en este orden):
+
+1. `dim_date`
+2. `dim_product`, `dim_customer`, `dim_location`
+3. `fact_sales`
+
+## 10.3. Evidencias generadas
+
+- `data/processed/data_warehouse.db`
+- `reports/referential_integrity.md`
+
+---
+
+# 11. Task I — Business Analysis + Dashboard
+
+## 11.1. Objetivo
+
+Responder: “¿Cómo evolucionan las ventas en el tiempo, por producto, clientes y regiones?”, apoyándose en KPIs y visualizaciones alineadas a BO-1..BO-4.
+
+## 11.2. Qué se implementó
+
+Se desarrolló `src/analysis.py`, que:
+
+- calcula KPIs agregados desde el dataset transformado
+- genera visualizaciones PNG en `reports/`
+- genera un dashboard HTML con las gráficas y enlaces a Data Docs y resúmenes
+
+## 11.3. Evidencias generadas
+
+Visualizaciones requeridas:
+
+- `reports/bo1_total_revenue_per_country.png`
+- `reports/bo1_transaction_value_box_by_product.png`
+- `reports/bo2_monthly_revenue_trend.png`
+- `reports/bo2_transactions_by_day_of_week.png`
+- `reports/bo3_top3_products_by_revenue.png`
+- `reports/bo3_revenue_share_by_country.png`
+- `reports/bo4_dq_score_input_vs_output.png`
+
+Dashboard:
+
+- `reports/kpi_dashboard.html`
+
+---
+
+# 12. Acceso rápido a HTML (Data Docs y reportes)
+
+## 12.1. Data Docs (Great Expectations)
+
+Abrir en navegador:
+
+```powershell
+Start-Process "C:\Users\LENOVO\OneDrive\Documentos\ETL\ETL-lab-4\gx_context\uncommitted\data_docs\local_site\index.html"
+```
+
+## 12.2. Reportes HTML en `reports/`
+
+```powershell
+Start-Process "C:\Users\LENOVO\OneDrive\Documentos\ETL\ETL-lab-4\reports\input_validation_failure_summary.html"
+Start-Process "C:\Users\LENOVO\OneDrive\Documentos\ETL\ETL-lab-4\reports\output_validation_comparison_table.html"
+Start-Process "C:\Users\LENOVO\OneDrive\Documentos\ETL\ETL-lab-4\reports\kpi_dashboard.html"
+```
 
