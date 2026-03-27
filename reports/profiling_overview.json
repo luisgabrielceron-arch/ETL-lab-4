@@ -1,6 +1,6 @@
 {
-    "dataset_path": "C:\\Users\\Pasoseguro\\OneDrive - mipasoseguro.com.co\\Escritorio\\UAO- INTELIGENCIA ARTIFICIAL\\6 SEMESTRE\\ETL\\ETL_Lab_4\\data\\raw\\retail_etl_dataset.csv",
-    "generated_at": "2026-03-25T12:30:19.202864",
+    "dataset_path": "C:\\Users\\LENOVO\\OneDrive\\Documentos\\ETL\\ETL-lab-4\\data\\raw\\retail_etl_dataset.csv",
+    "generated_at": "2026-03-27T13:17:35.224243",
     "shape": {
         "rows": 5100,
         "columns": 8
@@ -8,12 +8,12 @@
     "dtypes": {
         "invoice_id": "int64",
         "customer_id": "float64",
-        "product": "str",
+        "product": "object",
         "quantity": "int64",
         "price": "float64",
         "total_revenue": "float64",
-        "country": "str",
-        "invoice_date": "str"
+        "country": "object",
+        "invoice_date": "object"
     },
     "dataset_memory_mb": 1.0192,
     "missing_summary": [
@@ -106,8 +106,8 @@
     "great_expectations_registration": {
         "registered": true,
         "error": null,
-        "datasource_name": "etl_lab_pandas_20260325_123015",
-        "asset_name": "retail_raw_asset_20260325_123015",
+        "datasource_name": "etl_lab_pandas_20260327_131734",
+        "asset_name": "retail_raw_asset_20260327_131734",
         "api_mode": "fluent_data_sources"
     }
 }

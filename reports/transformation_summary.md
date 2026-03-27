@@ -13,7 +13,7 @@
 - `price` (float64)
 - `total_revenue` (float64)
 - `country` (string)
-- `invoice_date` (datetime64[us])
+- `invoice_date` (datetime64[ns])
 - `year` (Int64)
 - `month` (Int64)
 - `day_of_week` (string)

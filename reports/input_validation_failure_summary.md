@@ -1,7 +1,7 @@
 # Input Validation Failure Summary
 
-- Expectation Suite JSON: `C:\Users\Pasoseguro\OneDrive - mipasoseguro.com.co\Escritorio\UAO- INTELIGENCIA ARTIFICIAL\6 SEMESTRE\ETL\ETL_Lab_4\gx_context\expectations\retail_input_validation_suite.json`
-- Validation name: `retail_input_validation_definition_20260325_123805_290622`
+- Expectation Suite JSON: `C:\Users\LENOVO\OneDrive\Documentos\ETL\ETL-lab-4\gx_context\expectations\retail_input_validation_suite.json`
+- Validation name: `retail_input_validation_definition_20260327_131733_927373`
 - Data Quality Score (input): **0.0%**
 
                                     expectation_label                    expectation_type            column    dimension expected_result_raw actual_result_raw  success  element_count  unexpected_count  pass_percent  failure_percent

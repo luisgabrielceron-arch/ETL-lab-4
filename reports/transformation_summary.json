@@ -1,5 +1,5 @@
 {
-    "generated_at": "2026-03-26T11:48:07.472929",
+    "generated_at": "2026-03-27T13:17:39.574088",
     "row_count_before": 3500,
     "row_count_after": 3500,
     "columns_before": [
@@ -34,7 +34,7 @@
         "price": "float64",
         "total_revenue": "float64",
         "country": "string",
-        "invoice_date": "datetime64[us]",
+        "invoice_date": "datetime64[ns]",
         "year": "Int64",
         "month": "Int64",
         "day_of_week": "string",

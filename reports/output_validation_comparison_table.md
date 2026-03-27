@@ -1,7 +1,7 @@
 # Output Validation Comparison Table
 
-- Expectation Suite JSON: `C:\Users\Pasoseguro\OneDrive - mipasoseguro.com.co\Escritorio\UAO- INTELIGENCIA ARTIFICIAL\6 SEMESTRE\ETL\ETL_Lab_4\gx_context\expectations\retail_input_validation_suite.json`
-- Validation name: `retail_output_validation_definition_20260326_153014_582597`
+- Expectation Suite JSON: `C:\Users\LENOVO\OneDrive\Documentos\ETL\ETL-lab-4\gx_context\expectations\retail_input_validation_suite.json`
+- Validation name: `retail_output_validation_definition_20260327_131734_101444`
 - Data Quality Score (input): **0.0%**
 - Data Quality Score (output): **100.0%**
 

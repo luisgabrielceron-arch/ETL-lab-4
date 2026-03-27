@@ -1,0 +1,8 @@
+﻿Column,Issue,Example,Dimension,Business Impact,Approx Count
+invoice_id,Duplicate IDs,21238,Uniqueness,Revenue double counted in BO-1 KPIs,2131
+customer_id,NULL values,NaN,Completeness,Cannot link sales to customers for BO-3,202
+quantity,Negative values,-3,Validity,Negative units corrupt total_revenue (BO-1),149
+price,Negative values,-83.02,Validity,Invalid pricing affects financial KPIs (BO-1),101
+total_revenue,Does not equal quantity × price,Offset error,Accuracy,Misstated revenue (BO-1),148
+country,Multiple formats,"colombia, CO",Consistency,Regional insights unreliable (BO-3),7
+invoice_date,Null-like strings and future dates,"N/A, 2026-01-01",Timeliness,Time series unreliable (BO-2),139

@@ -1,0 +1,9 @@
+﻿Policy Statement,GE Expectation,Severity,Addresses (BO)
+invoice_id must be unique across the entire dataset,expect_column_values_to_be_unique(invoice_id),Critical,"BO-1, BO-4"
+quantity must be a positive integer (≥ 1),"expect_column_values_to_be_between(quantity, min=1)",Critical,BO-1
+price must be greater than zero,"expect_column_values_to_be_between(price, min=0.01)",Critical,BO-1
+total_revenue must equal quantity × price (±0.01),"expect_column_values_to_be_between(_revenue_diff_abs, min=0.0, max=0.01)",Critical,"BO-1, BO-4"
+"country must be one of {Colombia, Ecuador, Peru, Chile}","expect_column_values_to_be_in_set(country, {Colombia,Ecuador,Peru,Chile})",High,BO-3
+invoice_date must follow YYYY-MM-DD and fall within 2023-01-01 to 2023-12-31,"expect_column_values_to_match_regex(invoice_date, ^\d{4}-\d{2}-\d{2}$), expect_column_values_to_be_between(year, 2023, 2023)",High,BO-2
+customer_id must be non-null positive integer,"expect_column_values_to_not_be_null(customer_id), expect_column_values_to_be_between(customer_id, min=1)",High,BO-3
+product must belong to the allowed catalog,"expect_column_values_to_be_in_set(product, catalog)",Medium,BO-3

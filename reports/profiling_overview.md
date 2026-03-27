@@ -1,7 +1,7 @@
 # Profiling Overview
 
-- Dataset: `C:\Users\Pasoseguro\OneDrive - mipasoseguro.com.co\Escritorio\UAO- INTELIGENCIA ARTIFICIAL\6 SEMESTRE\ETL\ETL_Lab_4\data\raw\retail_etl_dataset.csv`
-- Generated at: `2026-03-25T12:30:19.202864`
+- Dataset: `C:\Users\LENOVO\OneDrive\Documentos\ETL\ETL-lab-4\data\raw\retail_etl_dataset.csv`
+- Generated at: `2026-03-27T13:17:35.224243`
 - Rows: **5100**
 - Columns: **8**
 - Memory (MB): **1.0192**
@@ -28,6 +28,6 @@
 ## Great Expectations registration
 - registered: **True**
 - error: **None**
-- datasource_name: **etl_lab_pandas_20260325_123015**
-- asset_name: **retail_raw_asset_20260325_123015**
+- datasource_name: **etl_lab_pandas_20260327_131734**
+- asset_name: **retail_raw_asset_20260327_131734**
 - api_mode: **fluent_data_sources**

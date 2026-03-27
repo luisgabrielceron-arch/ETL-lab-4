@@ -169,5 +169,65 @@ fluent_datasources:
           retail_transformed_batch_20260326_153014_582597:
             id: 832500de-6257-4ab6-ba8e-253cbed7a119
             partitioner:
+  retail_input_ds_20260327_130813_451158:
+    type: pandas
+    id: 06276ee9-10da-4bb4-ad8e-fd8afa55314f
+    assets:
+      retail_raw_asset_20260327_130813_451158:
+        type: dataframe
+        id: d02dc522-41fc-4943-b95e-a142bbe4bca3
+        batch_metadata: {}
+        batch_definitions:
+          retail_raw_batch_20260327_130813_451158:
+            id: b155c0d2-ac6b-4cba-b0dd-101c4059e386
+            partitioner:
+  retail_input_ds_20260327_130829_752438:
+    type: pandas
+    id: 1260784d-7c01-463f-a8ce-16c1a3597440
+    assets:
+      retail_raw_asset_20260327_130829_752438:
+        type: dataframe
+        id: b02f007d-0f48-4701-9a6c-6e7dc0f1b23e
+        batch_metadata: {}
+        batch_definitions:
+          retail_raw_batch_20260327_130829_752438:
+            id: b7a9c6f8-c7bf-48f3-9013-0531c20be84b
+            partitioner:
+  retail_output_ds_20260327_130919_594414:
+    type: pandas
+    id: 285513f1-87a3-4454-927f-901eb76b1b36
+    assets:
+      retail_transformed_asset_20260327_130919_594414:
+        type: dataframe
+        id: b7c89bf5-970f-45ba-a44e-8b702b0c3de9
+        batch_metadata: {}
+        batch_definitions:
+          retail_transformed_batch_20260327_130919_594414:
+            id: 33580cca-d945-470b-a12b-f43727990397
+            partitioner:
+  retail_input_ds_20260327_131733_927373:
+    type: pandas
+    id: c97551b6-82a5-4155-b8da-4662813009df
+    assets:
+      retail_raw_asset_20260327_131733_927373:
+        type: dataframe
+        id: c1e6ba81-55ed-4e3f-b559-2def0755108b
+        batch_metadata: {}
+        batch_definitions:
+          retail_raw_batch_20260327_131733_927373:
+            id: 8235595b-ecfe-43a5-846b-a0be51a3e4d7
+            partitioner:
+  retail_output_ds_20260327_131734_101444:
+    type: pandas
+    id: 35a59931-fa2c-4cd8-9303-0ce926a7137c
+    assets:
+      retail_transformed_asset_20260327_131734_101444:
+        type: dataframe
+        id: b7aa992d-97cf-447b-a231-e8556482e310
+        batch_metadata: {}
+        batch_definitions:
+          retail_transformed_batch_20260327_131734_101444:
+            id: ca058f4a-7f45-446a-a335-5344b5d53e36
+            partitioner:
 analytics_enabled:
 data_context_id: 17fb5eea-76c1-4fa9-bbad-8b5e596d34a8
