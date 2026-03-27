@@ -52,11 +52,84 @@ def build_dim_location(df: pd.DataFrame) -> pd.DataFrame:
     return dim[["location_id", "country"]]
 
 def build_fact_sales(df: pd.DataFrame, dim_product: pd.DataFrame, dim_customer: pd.DataFrame, dim_location: pd.DataFrame, dim_date: pd.DataFrame) -> pd.DataFrame:
-    p = dim_product.rename(columns={"product_id": "product_id", "product_name": "product"})
-    c = dim_customer.rename(columns={"customer_id": "customer_id"})
-    l = dim_location.rename(columns={"location_id": "location_id", "country": "country"})
-    d = dim_date.rename(columns={"date_id": "date_id", "full_date": "invoice_date"})
-    x = df.merge(p, on="product", how="left").merge(c, on="customer_id", how="left").merge(l, on="country", how="left").merge(d, on="invoice_date", how="left")
+    if df["product"].isna().any():
+        raise ValueError("fact_sales build failed: null product values exist in transformed data.")
+    if df["country"].isna().any():
+        raise ValueError("fact_sales build failed: null country values exist in transformed data.")
+    if df["invoice_date"].isna().any():
+        raise ValueError("fact_sales build failed: null invoice_date values exist in transformed data.")
+    if df["customer_id"].isna().any():
+        raise ValueError("fact_sales build failed: null customer_id values exist in transformed data.")
+
+    if dim_product["product_name"].duplicated().any():
+        raise ValueError("dim_product has duplicate product_name values; cannot safely map product_id.")
+    if dim_location["country"].duplicated().any():
+        raise ValueError("dim_location has duplicate country values; cannot safely map location_id.")
+    if dim_date["full_date"].duplicated().any():
+        raise ValueError("dim_date has duplicate full_date values; cannot safely map date_id.")
+    if dim_customer["customer_id"].duplicated().any():
+        raise ValueError("dim_customer has duplicate customer_id values; cannot safely map customers.")
+
+    original_row_count = int(len(df))
+
+    p = dim_product.rename(columns={"product_name": "product"})
+    x = df.merge(
+        p[["product", "product_id"]],
+        on="product",
+        how="left",
+        validate="many_to_one",
+        indicator="_merge_product",
+    )
+    missing_product = int((x["_merge_product"] == "left_only").sum())
+    if missing_product:
+        sample = x.loc[x["_merge_product"] == "left_only", "product"].dropna().astype(str).head(10).tolist()
+        raise ValueError(f"Unmatched product values: {missing_product}. Examples: {sample}")
+    x = x.drop(columns=["_merge_product"])
+
+    l = dim_location
+    x = x.merge(
+        l[["country", "location_id"]],
+        on="country",
+        how="left",
+        validate="many_to_one",
+        indicator="_merge_location",
+    )
+    missing_location = int((x["_merge_location"] == "left_only").sum())
+    if missing_location:
+        sample = x.loc[x["_merge_location"] == "left_only", "country"].dropna().astype(str).head(10).tolist()
+        raise ValueError(f"Unmatched country values: {missing_location}. Examples: {sample}")
+    x = x.drop(columns=["_merge_location"])
+
+    d = dim_date.rename(columns={"full_date": "invoice_date"})
+    x = x.merge(
+        d[["invoice_date", "date_id"]],
+        on="invoice_date",
+        how="left",
+        validate="many_to_one",
+        indicator="_merge_date",
+    )
+    missing_date = int((x["_merge_date"] == "left_only").sum())
+    if missing_date:
+        sample = (
+            x.loc[x["_merge_date"] == "left_only", "invoice_date"]
+            .dropna()
+            .astype(str)
+            .head(10)
+            .tolist()
+        )
+        raise ValueError(f"Unmatched invoice_date values: {missing_date}. Examples: {sample}")
+    x = x.drop(columns=["_merge_date"])
+
+    if int(len(x)) != original_row_count:
+        raise ValueError(
+            f"fact_sales build changed row count unexpectedly: before={original_row_count}, after={len(x)}"
+        )
+
+    required_fk_cols = ["product_id", "location_id", "date_id"]
+    missing_fk_any = {col: int(x[col].isna().sum()) for col in required_fk_cols}
+    if any(v > 0 for v in missing_fk_any.values()):
+        raise ValueError(f"fact_sales has null foreign keys after mapping: {missing_fk_any}")
+
     x = x[["invoice_id", "product_id", "customer_id", "location_id", "date_id", "quantity", "price", "total_revenue"]].copy()
     x["sale_id"] = range(1, len(x) + 1)
     cols = ["sale_id", "invoice_id", "product_id", "customer_id", "location_id", "date_id", "quantity", "price", "total_revenue"]
