@@ -1,7 +1,7 @@
 # Output Validation Comparison Table
 
 - Expectation Suite JSON: `C:\Users\LENOVO\OneDrive\Documentos\ETL\ETL-lab-4\gx_context\expectations\retail_input_validation_suite.json`
-- Validation name: `retail_output_validation_definition_20260327_161226_705745`
+- Validation name: `retail_output_validation_definition_20260327_173605_987353`
 - Data Quality Score (input): **0.0%**
 - Data Quality Score (output): **100.0%**
 

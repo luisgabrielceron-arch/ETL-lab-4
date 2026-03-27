@@ -1,0 +1,107 @@
+{
+  "run_id": "20260327_173109_580150",
+  "started_at": "2026-03-27T17:31:09.580150",
+  "finished_at": "2026-03-27T17:31:32.239677",
+  "status": "success",
+  "steps": [
+    {
+      "step_key": "A",
+      "step_name": "Extract & Profiling",
+      "started_at": "2026-03-27T17:31:09.580150",
+      "finished_at": "2026-03-27T17:31:10.946327",
+      "duration_seconds": 1.366074,
+      "status": "success",
+      "error_type": null,
+      "error_message": null,
+      "traceback": null
+    },
+    {
+      "step_key": "B",
+      "step_name": "Input Validation (Great Expectations)",
+      "started_at": "2026-03-27T17:31:10.946327",
+      "finished_at": "2026-03-27T17:31:16.964490",
+      "duration_seconds": 6.018486,
+      "status": "success",
+      "error_type": null,
+      "error_message": null,
+      "traceback": null
+    },
+    {
+      "step_key": "C",
+      "step_name": "Data Quality Analysis & Policy Proposal",
+      "started_at": "2026-03-27T17:31:16.964490",
+      "finished_at": "2026-03-27T17:31:17.092805",
+      "duration_seconds": 0.12847,
+      "status": "success",
+      "error_type": null,
+      "error_message": null,
+      "traceback": null
+    },
+    {
+      "step_key": "D",
+      "step_name": "Cleaning",
+      "started_at": "2026-03-27T17:31:17.092805",
+      "finished_at": "2026-03-27T17:31:18.037834",
+      "duration_seconds": 0.945033,
+      "status": "success",
+      "error_type": null,
+      "error_message": null,
+      "traceback": null
+    },
+    {
+      "step_key": "E",
+      "step_name": "Transformation",
+      "started_at": "2026-03-27T17:31:18.037834",
+      "finished_at": "2026-03-27T17:31:18.974715",
+      "duration_seconds": 0.936068,
+      "status": "success",
+      "error_type": null,
+      "error_message": null,
+      "traceback": null
+    },
+    {
+      "step_key": "F",
+      "step_name": "Output Validation (Great Expectations)",
+      "started_at": "2026-03-27T17:31:18.974715",
+      "finished_at": "2026-03-27T17:31:24.375834",
+      "duration_seconds": 5.401698,
+      "status": "success",
+      "error_type": null,
+      "error_message": null,
+      "traceback": null
+    },
+    {
+      "step_key": "G",
+      "step_name": "Dimensional Model (Star Schema)",
+      "started_at": "2026-03-27T17:31:24.375834",
+      "finished_at": "2026-03-27T17:31:24.579880",
+      "duration_seconds": 0.203177,
+      "status": "success",
+      "error_type": null,
+      "error_message": null,
+      "traceback": null
+    },
+    {
+      "step_key": "H",
+      "step_name": "Load Data Warehouse (SQLite)",
+      "started_at": "2026-03-27T17:31:24.579880",
+      "finished_at": "2026-03-27T17:31:26.721265",
+      "duration_seconds": 2.1417,
+      "status": "success",
+      "error_type": null,
+      "error_message": null,
+      "traceback": null
+    },
+    {
+      "step_key": "I",
+      "step_name": "Business Analysis & KPI Charts",
+      "started_at": "2026-03-27T17:31:26.721265",
+      "finished_at": "2026-03-27T17:31:32.239677",
+      "duration_seconds": 5.518213,
+      "status": "success",
+      "error_type": null,
+      "error_message": null,
+      "traceback": null
+    }
+  ]
+}

@@ -9,17 +9,17 @@
                     "column": "_invoice_date_iso",
                     "min_value": "2023-01-01",
                     "max_value": "2023-12-31",
-                    "batch_id": "retail_input_ds_20260327_161226_696885-retail_raw_asset_20260327_161226_696885"
+                    "batch_id": "retail_input_ds_20260327_173548_488417-retail_raw_asset_20260327_173548_488417"
                 },
                 "meta": {},
-                "id": "8062346e-8d10-440f-bf61-16841898431c",
+                "id": "c2807254-d0fc-4713-b4b6-255f382409fb",
                 "severity": "critical"
             },
             "result": {},
             "meta": {},
             "exception_info": {
-                "MetricConfigurationID(metric_name='column_values.between.condition', metric_domain_kwargs_id='99be0043757d93121cb95c860adab94f', metric_value_kwargs_id='1e49360030fd3b426f7fa151eedcd823')": {
-                    "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\LENOVO\\OneDrive\\Documentos\\ETL\\ETL-lab-4\\.venv\\Lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 577, in _process_direct_and_bundled_metric_computation_configurations\n    metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable\n  File \"C:\\Users\\LENOVO\\OneDrive\\Documentos\\ETL\\ETL-lab-4\\.venv\\Lib\\site-packages\\great_expectations\\expectations\\metrics\\metric_provider.py\", line 99, in inner_func\n    return metric_fn(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\LENOVO\\OneDrive\\Documentos\\ETL\\ETL-lab-4\\.venv\\Lib\\site-packages\\great_expectations\\expectations\\metrics\\map_metric_provider\\column_condition_partial.py\", line 117, in inner_func\n    meets_expectation_series = metric_fn(\n                               ^^^^^^^^^^\n  File \"C:\\Users\\LENOVO\\OneDrive\\Documentos\\ETL\\ETL-lab-4\\.venv\\Lib\\site-packages\\great_expectations\\expectations\\metrics\\column_map_metrics\\column_values_between.py\", line 127, in _pandas\n    return temp_column.map(is_between)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\LENOVO\\OneDrive\\Documentos\\ETL\\ETL-lab-4\\.venv\\Lib\\site-packages\\pandas\\core\\series.py\", line 4691, in map\n    new_values = self._map_values(arg, na_action=na_action)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\LENOVO\\OneDrive\\Documentos\\ETL\\ETL-lab-4\\.venv\\Lib\\site-packages\\pandas\\core\\base.py\", line 921, in _map_values\n    return algorithms.map_array(arr, mapper, na_action=na_action, convert=convert)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\LENOVO\\OneDrive\\Documentos\\ETL\\ETL-lab-4\\.venv\\Lib\\site-packages\\pandas\\core\\algorithms.py\", line 1743, in map_array\n    return lib.map_infer(values, mapper, convert=convert)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"lib.pyx\", line 2972, in pandas._libs.lib.map_infer\n  File \"C:\\Users\\LENOVO\\OneDrive\\Documentos\\ETL\\ETL-lab-4\\.venv\\Lib\\site-packages\\great_expectations\\expectations\\metrics\\column_map_metrics\\column_values_between.py\", line 83, in is_between\n    raise TypeError(  # noqa: TRY003 # FIXME CoP\nTypeError: Column values, min_value, and max_value must either be None or of the same type.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\LENOVO\\OneDrive\\Documentos\\ETL\\ETL-lab-4\\.venv\\Lib\\site-packages\\great_expectations\\validator\\validation_graph.py\", line 290, in _resolve\n    self._execution_engine.resolve_metrics(\n  File \"C:\\Users\\LENOVO\\OneDrive\\Documentos\\ETL\\ETL-lab-4\\.venv\\Lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 294, in resolve_metrics\n    return self._process_direct_and_bundled_metric_computation_configurations(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\LENOVO\\OneDrive\\Documentos\\ETL\\ETL-lab-4\\.venv\\Lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 582, in _process_direct_and_bundled_metric_computation_configurations\n    raise gx_exceptions.MetricResolutionError(\ngreat_expectations.exceptions.exceptions.MetricResolutionError: Column values, min_value, and max_value must either be None or of the same type.\n",
+                "MetricConfigurationID(metric_name='column_values.between.condition', metric_domain_kwargs_id='ae92465620d517344a2ef12530d4e9d8', metric_value_kwargs_id='1e49360030fd3b426f7fa151eedcd823')": {
+                    "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 577, in _process_direct_and_bundled_metric_computation_configurations\n    metric_computation_configuration.metric_fn(  # type: ignore[misc] # F not callable\n  File \"C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\great_expectations\\expectations\\metrics\\metric_provider.py\", line 99, in inner_func\n    return metric_fn(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\great_expectations\\expectations\\metrics\\map_metric_provider\\column_condition_partial.py\", line 117, in inner_func\n    meets_expectation_series = metric_fn(\n                               ^^^^^^^^^^\n  File \"C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\great_expectations\\expectations\\metrics\\column_map_metrics\\column_values_between.py\", line 127, in _pandas\n    return temp_column.map(is_between)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\pandas\\core\\series.py\", line 4691, in map\n    new_values = self._map_values(arg, na_action=na_action)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\pandas\\core\\base.py\", line 921, in _map_values\n    return algorithms.map_array(arr, mapper, na_action=na_action, convert=convert)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\pandas\\core\\algorithms.py\", line 1743, in map_array\n    return lib.map_infer(values, mapper, convert=convert)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"lib.pyx\", line 2972, in pandas._libs.lib.map_infer\n  File \"C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\great_expectations\\expectations\\metrics\\column_map_metrics\\column_values_between.py\", line 83, in is_between\n    raise TypeError(  # noqa: TRY003 # FIXME CoP\nTypeError: Column values, min_value, and max_value must either be None or of the same type.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\great_expectations\\validator\\validation_graph.py\", line 290, in _resolve\n    self._execution_engine.resolve_metrics(\n  File \"C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 294, in resolve_metrics\n    return self._process_direct_and_bundled_metric_computation_configurations(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\great_expectations\\execution_engine\\execution_engine.py\", line 582, in _process_direct_and_bundled_metric_computation_configurations\n    raise gx_exceptions.MetricResolutionError(\ngreat_expectations.exceptions.exceptions.MetricResolutionError: Column values, min_value, and max_value must either be None or of the same type.\n",
                     "exception_message": "Column values, min_value, and max_value must either be None or of the same type.",
                     "raised_exception": true
                 }
@@ -30,11 +30,11 @@
             "expectation_config": {
                 "type": "expect_column_values_to_not_be_null",
                 "kwargs": {
-                    "batch_id": "retail_input_ds_20260327_161226_696885-retail_raw_asset_20260327_161226_696885",
+                    "batch_id": "retail_input_ds_20260327_173548_488417-retail_raw_asset_20260327_173548_488417",
                     "column": "customer_id"
                 },
                 "meta": {},
-                "id": "78e1b740-d21e-4fbb-8cc9-2157aeb821b2",
+                "id": "89742881-9046-4224-b77f-4ec72d1ca460",
                 "severity": "critical"
             },
             "result": {
@@ -180,11 +180,11 @@
             "expectation_config": {
                 "type": "expect_column_values_to_not_be_null",
                 "kwargs": {
-                    "batch_id": "retail_input_ds_20260327_161226_696885-retail_raw_asset_20260327_161226_696885",
+                    "batch_id": "retail_input_ds_20260327_173548_488417-retail_raw_asset_20260327_173548_488417",
                     "column": "invoice_date"
                 },
                 "meta": {},
-                "id": "2b511b7b-a37e-493c-941d-b52353a18a5a",
+                "id": "c9f40cc2-4179-4c69-8c31-9e3df956e1d3",
                 "severity": "critical"
             },
             "result": {
@@ -240,12 +240,12 @@
             "expectation_config": {
                 "type": "expect_column_values_to_match_regex",
                 "kwargs": {
-                    "batch_id": "retail_input_ds_20260327_161226_696885-retail_raw_asset_20260327_161226_696885",
+                    "batch_id": "retail_input_ds_20260327_173548_488417-retail_raw_asset_20260327_173548_488417",
                     "column": "invoice_date",
                     "regex": "^\\d{4}-\\d{2}-\\d{2}$"
                 },
                 "meta": {},
-                "id": "75238a44-0a9f-46be-ba09-45311f3195f2",
+                "id": "522df45a-4198-4830-b4a4-36cfbac68466",
                 "severity": "critical"
             },
             "result": {
@@ -347,11 +347,11 @@
             "expectation_config": {
                 "type": "expect_column_values_to_be_unique",
                 "kwargs": {
-                    "batch_id": "retail_input_ds_20260327_161226_696885-retail_raw_asset_20260327_161226_696885",
+                    "batch_id": "retail_input_ds_20260327_173548_488417-retail_raw_asset_20260327_173548_488417",
                     "column": "invoice_id"
                 },
                 "meta": {},
-                "id": "04edb2e2-7d33-4450-8987-7c6803259e4b",
+                "id": "3faee802-726b-4465-889a-4b4862c85d80",
                 "severity": "critical"
             },
             "result": {
@@ -501,12 +501,12 @@
             "expectation_config": {
                 "type": "expect_column_values_to_be_between",
                 "kwargs": {
-                    "batch_id": "retail_input_ds_20260327_161226_696885-retail_raw_asset_20260327_161226_696885",
+                    "batch_id": "retail_input_ds_20260327_173548_488417-retail_raw_asset_20260327_173548_488417",
                     "column": "quantity",
                     "min_value": 1.0
                 },
                 "meta": {},
-                "id": "75a68a6a-b349-4f67-a349-86be7c569afc",
+                "id": "3f74edee-d84c-400f-a93b-5e15afa06ac0",
                 "severity": "critical"
             },
             "result": {
@@ -592,12 +592,12 @@
             "expectation_config": {
                 "type": "expect_column_values_to_be_between",
                 "kwargs": {
-                    "batch_id": "retail_input_ds_20260327_161226_696885-retail_raw_asset_20260327_161226_696885",
+                    "batch_id": "retail_input_ds_20260327_173548_488417-retail_raw_asset_20260327_173548_488417",
                     "column": "price",
                     "min_value": 0.01
                 },
                 "meta": {},
-                "id": "24357222-56d6-487a-a318-73d2d11bab87",
+                "id": "3ffafd86-30d7-436f-a328-1568664933f2",
                 "severity": "critical"
             },
             "result": {
@@ -747,7 +747,7 @@
             "expectation_config": {
                 "type": "expect_column_values_to_be_in_set",
                 "kwargs": {
-                    "batch_id": "retail_input_ds_20260327_161226_696885-retail_raw_asset_20260327_161226_696885",
+                    "batch_id": "retail_input_ds_20260327_173548_488417-retail_raw_asset_20260327_173548_488417",
                     "column": "product",
                     "value_set": [
                         "Laptop",
@@ -761,7 +761,7 @@
                     ]
                 },
                 "meta": {},
-                "id": "8c96cd8a-1193-411a-8568-0a0cac1fa4d6",
+                "id": "06211030-f209-4f68-b71c-6ccbe015a358",
                 "severity": "critical"
             },
             "result": {
@@ -835,13 +835,13 @@
             "expectation_config": {
                 "type": "expect_column_values_to_be_between",
                 "kwargs": {
-                    "batch_id": "retail_input_ds_20260327_161226_696885-retail_raw_asset_20260327_161226_696885",
+                    "batch_id": "retail_input_ds_20260327_173548_488417-retail_raw_asset_20260327_173548_488417",
                     "column": "_revenue_diff_abs",
                     "min_value": 0.0,
                     "max_value": 0.01
                 },
                 "meta": {},
-                "id": "47ad6ec2-d89c-4154-88f6-116201619226",
+                "id": "ccf7903f-81c4-477c-9d53-d0937afc55a4",
                 "severity": "critical"
             },
             "result": {
@@ -987,7 +987,7 @@
             "expectation_config": {
                 "type": "expect_column_values_to_be_in_set",
                 "kwargs": {
-                    "batch_id": "retail_input_ds_20260327_161226_696885-retail_raw_asset_20260327_161226_696885",
+                    "batch_id": "retail_input_ds_20260327_173548_488417-retail_raw_asset_20260327_173548_488417",
                     "column": "country",
                     "value_set": [
                         "Colombia",
@@ -997,7 +997,7 @@
                     ]
                 },
                 "meta": {},
-                "id": "71cca042-8e3d-4864-bb3f-4eee1a380011",
+                "id": "a8f35657-37ac-4fee-83b1-d49432d258a5",
                 "severity": "critical"
             },
             "result": {
@@ -1089,24 +1089,24 @@
             "batch_data": "PandasDataFrame"
         },
         "batch_markers": {
-            "ge_load_time": "20260327T211228.746380Z",
+            "ge_load_time": "20260327T223549.490056Z",
             "pandas_data_fingerprint": "5c4f01f39fd16d3565d23691e1a8eaa7"
         },
         "active_batch_definition": {
-            "datasource_name": "retail_input_ds_20260327_161226_696885",
+            "datasource_name": "retail_input_ds_20260327_173548_488417",
             "data_connector_name": "fluent",
-            "data_asset_name": "retail_raw_asset_20260327_161226_696885",
+            "data_asset_name": "retail_raw_asset_20260327_173548_488417",
             "batch_identifiers": {
                 "dataframe": "<DATAFRAME>"
             }
         },
-        "validation_id": "c72dce85-00e8-4daa-9559-3f2eed3a04c0",
+        "validation_id": "794bc8fd-ee50-4b53-a570-f736248fd0f2",
         "checkpoint_id": null,
         "run_id": {
             "run_name": null,
-            "run_time": "2026-03-27T16:12:28.905403-05:00"
+            "run_time": "2026-03-27T17:35:49.768024-05:00"
         },
-        "validation_time": "2026-03-27T21:12:28.905403+00:00",
+        "validation_time": "2026-03-27T22:35:49.768024+00:00",
         "batch_parameters": {
             "dataframe": "<DATAFRAME>"
         }

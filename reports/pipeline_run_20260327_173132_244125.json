@@ -1,0 +1,30 @@
+{
+  "run_id": "20260327_173132_244125",
+  "started_at": "2026-03-27T17:31:32.244125",
+  "finished_at": "2026-03-27T17:31:34.412845",
+  "status": "failed",
+  "steps": [
+    {
+      "step_key": "A",
+      "step_name": "Extract & Profiling",
+      "started_at": "2026-03-27T17:31:32.244125",
+      "finished_at": "2026-03-27T17:31:33.768568",
+      "duration_seconds": 1.525651,
+      "status": "success",
+      "error_type": null,
+      "error_message": null,
+      "traceback": null
+    },
+    {
+      "step_key": "B",
+      "step_name": "Input Validation (Great Expectations)",
+      "started_at": "2026-03-27T17:31:33.770203",
+      "finished_at": "2026-03-27T17:31:34.412845",
+      "duration_seconds": 0.642964,
+      "status": "failed",
+      "error_type": "DataContextError",
+      "error_message": "Can not write the fluent datasource retail_input_ds_20260327_173108_631560 because a datasource of that name already exists in the data context.",
+      "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\LENOVO\\OneDrive\\Documentos\\ETL\\ETL-lab-4\\src\\main.py\", line 52, in run_step\n    fn()\n  File \"C:\\Users\\LENOVO\\OneDrive\\Documentos\\ETL\\ETL-lab-4\\src\\validate_input.py\", line 531, in main\n    batch_definition, datasource_name, asset_name, batch_definition_name = build_batch_definition(\n                                                                           ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\LENOVO\\OneDrive\\Documentos\\ETL\\ETL-lab-4\\src\\validate_input.py\", line 143, in build_batch_definition\n    datasource = context.data_sources.add_pandas(name=datasource_name)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\great_expectations\\datasource\\fluent\\sources.py\", line 477, in add_datasource\n    datasource = self._data_context._add_fluent_datasource(datasource)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\great_expectations\\data_context\\data_context\\abstract_data_context.py\", line 558, in _add_fluent_datasource\n    raise gx_exceptions.DataContextError(  # noqa: TRY003 # FIXME CoP\ngreat_expectations.exceptions.exceptions.DataContextError: Can not write the fluent datasource retail_input_ds_20260327_173108_631560 because a datasource of that name already exists in the data context.\n"
+    }
+  ]
+}

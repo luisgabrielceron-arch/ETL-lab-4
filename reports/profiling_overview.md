@@ -1,7 +1,7 @@
 # Profiling Overview
 
 - Dataset: `C:\Users\LENOVO\OneDrive\Documentos\ETL\ETL-lab-4\data\raw\retail_etl_dataset.csv`
-- Generated at: `2026-03-27T16:12:27.793380`
+- Generated at: `2026-03-27T17:35:38.721306`
 - Rows: **5100**
 - Columns: **8**
 - Memory (MB): **1.0192**
@@ -28,6 +28,6 @@
 ## Great Expectations registration
 - registered: **True**
 - error: **None**
-- datasource_name: **etl_lab_pandas_20260327_161227**
-- asset_name: **retail_raw_asset_20260327_161227**
+- datasource_name: **etl_lab_pandas_20260327_173528**
+- asset_name: **retail_raw_asset_20260327_173528**
 - api_mode: **fluent_data_sources**

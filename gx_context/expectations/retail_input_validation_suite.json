@@ -1,7 +1,7 @@
 {
   "expectations": [
     {
-      "id": "6e7f6e8f-59c8-4c00-a732-7f7b9e38448b",
+      "id": "79cd9fb5-74d2-42a8-b3e8-2a7953cbbd94",
       "kwargs": {
         "column": "customer_id"
       },
@@ -10,7 +10,7 @@
       "type": "expect_column_values_to_not_be_null"
     },
     {
-      "id": "2606ae3f-8633-484f-8af2-097c1e39a57d",
+      "id": "802a3706-494e-4ac8-b442-2e1b04bc6d9c",
       "kwargs": {
         "column": "invoice_date"
       },
@@ -19,7 +19,7 @@
       "type": "expect_column_values_to_not_be_null"
     },
     {
-      "id": "b9fb3645-26cd-4e7e-9cf5-7b547bc7e3f1",
+      "id": "8cbc0f1d-eacf-4d9d-9e50-2b066a32ef34",
       "kwargs": {
         "column": "invoice_id"
       },
@@ -28,7 +28,7 @@
       "type": "expect_column_values_to_be_unique"
     },
     {
-      "id": "f71f8fa2-87c5-4428-9d52-c4a3adf689fd",
+      "id": "6bdac5c8-34ad-42e1-88f4-8516ea888572",
       "kwargs": {
         "column": "quantity",
         "min_value": 1.0
@@ -38,7 +38,7 @@
       "type": "expect_column_values_to_be_between"
     },
     {
-      "id": "7e31d55d-2a08-4427-9b53-06599c1911b3",
+      "id": "f634820a-e8c6-4da9-b401-64a9ead7e757",
       "kwargs": {
         "column": "price",
         "min_value": 0.01
@@ -48,7 +48,7 @@
       "type": "expect_column_values_to_be_between"
     },
     {
-      "id": "be59fd43-89de-4947-b5bb-77f55e88d751",
+      "id": "c9176681-46b5-438c-b8e1-cb2ad78cdace",
       "kwargs": {
         "column": "product",
         "value_set": [
@@ -67,7 +67,7 @@
       "type": "expect_column_values_to_be_in_set"
     },
     {
-      "id": "79d27c15-9317-4a97-a6b3-59ddfd323e09",
+      "id": "9ea8b464-41d4-4c64-a1dd-549c5a04b5ed",
       "kwargs": {
         "column": "_revenue_diff_abs",
         "max_value": 0.01,
@@ -78,7 +78,7 @@
       "type": "expect_column_values_to_be_between"
     },
     {
-      "id": "0d5781f3-e853-4dd1-a6c1-fba3fe98d45f",
+      "id": "1f611a38-7b04-4162-92f5-8f91588e00c6",
       "kwargs": {
         "column": "country",
         "value_set": [
@@ -93,7 +93,7 @@
       "type": "expect_column_values_to_be_in_set"
     },
     {
-      "id": "35d68263-cba3-4848-84d3-74fd2dfcf641",
+      "id": "551cdd2d-3bb1-4e52-8a06-22ec41c940f5",
       "kwargs": {
         "column": "_invoice_date_str",
         "regex": "^\\d{4}-\\d{2}-\\d{2}$"
@@ -103,7 +103,7 @@
       "type": "expect_column_values_to_match_regex"
     },
     {
-      "id": "c7c50e85-9eb8-4a1b-a235-a3fe2e80bbc3",
+      "id": "0229236a-5e13-49a7-ac79-091420e4880e",
       "kwargs": {
         "column": "year",
         "max_value": 2023.0,
@@ -114,7 +114,7 @@
       "type": "expect_column_values_to_be_between"
     },
     {
-      "id": "d79aa900-2b52-44f2-9a9e-499029bb5ba7",
+      "id": "84eeee44-85a5-4ee2-9aff-88374003e97c",
       "kwargs": {
         "column": "month",
         "max_value": 12.0,
@@ -125,7 +125,7 @@
       "type": "expect_column_values_to_be_between"
     },
     {
-      "id": "8299d134-1ed3-4b4a-9808-2cfcdabf4442",
+      "id": "225d5840-216b-4c0e-85f8-df9a1391a3d4",
       "kwargs": {
         "column": "revenue_bin",
         "value_set": [
@@ -139,7 +139,7 @@
       "type": "expect_column_values_to_be_in_set"
     },
     {
-      "id": "c797f9b9-fe1f-4ee2-9365-c21df0faed42",
+      "id": "9beb5352-9a53-4bdc-8cc5-99447b6231e0",
       "kwargs": {
         "column": "total_revenue",
         "min_value": 0.01
@@ -149,7 +149,7 @@
       "type": "expect_column_values_to_be_between"
     },
     {
-      "id": "374c0c62-b9e2-463b-a7e4-a043a0899ec2",
+      "id": "b0925a37-bf95-42f5-8c30-df04ad8e8c1a",
       "kwargs": {
         "column": "invoice_id"
       },

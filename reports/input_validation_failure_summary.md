@@ -1,7 +1,7 @@
 # Input Validation Failure Summary
 
 - Expectation Suite JSON: `C:\Users\LENOVO\OneDrive\Documentos\ETL\ETL-lab-4\gx_context\expectations\retail_input_validation_suite.json`
-- Validation name: `retail_input_validation_definition_20260327_161226_696885`
+- Validation name: `retail_input_validation_definition_20260327_173548_488417`
 - Data Quality Score (input): **0.0%**
 
                                     expectation_label                    expectation_type            column    dimension expected_result_raw actual_result_raw  success  element_count  unexpected_count  pass_percent  failure_percent
