@@ -1,5 +1,4 @@
 # ETL Lab 4 — Great Expectations  
-## Avance documentado: Task A, Task B y Task C
 
 ## 1. Contexto del laboratorio
 
