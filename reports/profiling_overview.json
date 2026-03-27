@@ -1,6 +1,6 @@
 {
     "dataset_path": "C:\\Users\\LENOVO\\OneDrive\\Documentos\\ETL\\ETL-lab-4\\data\\raw\\retail_etl_dataset.csv",
-    "generated_at": "2026-03-27T13:17:35.224243",
+    "generated_at": "2026-03-27T16:12:27.793380",
     "shape": {
         "rows": 5100,
         "columns": 8
@@ -106,8 +106,8 @@
     "great_expectations_registration": {
         "registered": true,
         "error": null,
-        "datasource_name": "etl_lab_pandas_20260327_131734",
-        "asset_name": "retail_raw_asset_20260327_131734",
+        "datasource_name": "etl_lab_pandas_20260327_161227",
+        "asset_name": "retail_raw_asset_20260327_161227",
         "api_mode": "fluent_data_sources"
     }
 }

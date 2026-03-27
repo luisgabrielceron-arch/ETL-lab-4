@@ -6,11 +6,11 @@
             "expectation_config": {
                 "type": "expect_column_values_to_not_be_null",
                 "kwargs": {
-                    "batch_id": "retail_output_ds_20260327_131734_101444-retail_transformed_asset_20260327_131734_101444",
+                    "batch_id": "retail_output_ds_20260327_161226_705745-retail_transformed_asset_20260327_161226_705745",
                     "column": "customer_id"
                 },
                 "meta": {},
-                "id": "1d948b39-2aa6-4230-862a-251bdddcf3b5",
+                "id": "6e7f6e8f-59c8-4c00-a732-7f7b9e38448b",
                 "severity": "critical"
             },
             "result": {
@@ -33,11 +33,11 @@
             "expectation_config": {
                 "type": "expect_column_values_to_not_be_null",
                 "kwargs": {
-                    "batch_id": "retail_output_ds_20260327_131734_101444-retail_transformed_asset_20260327_131734_101444",
+                    "batch_id": "retail_output_ds_20260327_161226_705745-retail_transformed_asset_20260327_161226_705745",
                     "column": "invoice_date"
                 },
                 "meta": {},
-                "id": "3e5fb97d-52f1-4783-bcee-f7b201ce9b16",
+                "id": "2606ae3f-8633-484f-8af2-097c1e39a57d",
                 "severity": "critical"
             },
             "result": {
@@ -60,11 +60,11 @@
             "expectation_config": {
                 "type": "expect_column_values_to_be_unique",
                 "kwargs": {
-                    "batch_id": "retail_output_ds_20260327_131734_101444-retail_transformed_asset_20260327_131734_101444",
+                    "batch_id": "retail_output_ds_20260327_161226_705745-retail_transformed_asset_20260327_161226_705745",
                     "column": "invoice_id"
                 },
                 "meta": {},
-                "id": "7b7ed192-13bb-4db5-abef-7db3f0feb025",
+                "id": "b9fb3645-26cd-4e7e-9cf5-7b547bc7e3f1",
                 "severity": "critical"
             },
             "result": {
@@ -91,11 +91,11 @@
             "expectation_config": {
                 "type": "expect_column_values_to_not_be_null",
                 "kwargs": {
-                    "batch_id": "retail_output_ds_20260327_131734_101444-retail_transformed_asset_20260327_131734_101444",
+                    "batch_id": "retail_output_ds_20260327_161226_705745-retail_transformed_asset_20260327_161226_705745",
                     "column": "invoice_id"
                 },
                 "meta": {},
-                "id": "251f48e6-6ff0-4a24-b538-d1b6ab07b72e",
+                "id": "374c0c62-b9e2-463b-a7e4-a043a0899ec2",
                 "severity": "critical"
             },
             "result": {
@@ -118,12 +118,12 @@
             "expectation_config": {
                 "type": "expect_column_values_to_be_between",
                 "kwargs": {
-                    "batch_id": "retail_output_ds_20260327_131734_101444-retail_transformed_asset_20260327_131734_101444",
+                    "batch_id": "retail_output_ds_20260327_161226_705745-retail_transformed_asset_20260327_161226_705745",
                     "column": "quantity",
                     "min_value": 1.0
                 },
                 "meta": {},
-                "id": "1b6b5a2b-c1d8-4205-bafa-4e1d0ca7d802",
+                "id": "f71f8fa2-87c5-4428-9d52-c4a3adf689fd",
                 "severity": "critical"
             },
             "result": {
@@ -150,12 +150,12 @@
             "expectation_config": {
                 "type": "expect_column_values_to_be_between",
                 "kwargs": {
-                    "batch_id": "retail_output_ds_20260327_131734_101444-retail_transformed_asset_20260327_131734_101444",
+                    "batch_id": "retail_output_ds_20260327_161226_705745-retail_transformed_asset_20260327_161226_705745",
                     "column": "price",
                     "min_value": 0.01
                 },
                 "meta": {},
-                "id": "0c302075-cda9-4035-8b48-3949772df213",
+                "id": "7e31d55d-2a08-4427-9b53-06599c1911b3",
                 "severity": "critical"
             },
             "result": {
@@ -182,7 +182,7 @@
             "expectation_config": {
                 "type": "expect_column_values_to_be_in_set",
                 "kwargs": {
-                    "batch_id": "retail_output_ds_20260327_131734_101444-retail_transformed_asset_20260327_131734_101444",
+                    "batch_id": "retail_output_ds_20260327_161226_705745-retail_transformed_asset_20260327_161226_705745",
                     "column": "product",
                     "value_set": [
                         "Headphones",
@@ -196,7 +196,7 @@
                     ]
                 },
                 "meta": {},
-                "id": "d6fe175a-ab9d-4dd7-a6ce-eee9a32f77ba",
+                "id": "be59fd43-89de-4947-b5bb-77f55e88d751",
                 "severity": "critical"
             },
             "result": {
@@ -223,13 +223,13 @@
             "expectation_config": {
                 "type": "expect_column_values_to_be_between",
                 "kwargs": {
-                    "batch_id": "retail_output_ds_20260327_131734_101444-retail_transformed_asset_20260327_131734_101444",
+                    "batch_id": "retail_output_ds_20260327_161226_705745-retail_transformed_asset_20260327_161226_705745",
                     "column": "_revenue_diff_abs",
                     "min_value": 0.0,
                     "max_value": 0.01
                 },
                 "meta": {},
-                "id": "921c7c52-7c44-475e-8037-0aa46fa76a14",
+                "id": "79d27c15-9317-4a97-a6b3-59ddfd323e09",
                 "severity": "critical"
             },
             "result": {
@@ -256,7 +256,7 @@
             "expectation_config": {
                 "type": "expect_column_values_to_be_in_set",
                 "kwargs": {
-                    "batch_id": "retail_output_ds_20260327_131734_101444-retail_transformed_asset_20260327_131734_101444",
+                    "batch_id": "retail_output_ds_20260327_161226_705745-retail_transformed_asset_20260327_161226_705745",
                     "column": "country",
                     "value_set": [
                         "Colombia",
@@ -266,7 +266,7 @@
                     ]
                 },
                 "meta": {},
-                "id": "349fa04a-1a1e-4390-88a5-1416a7ed2bb9",
+                "id": "0d5781f3-e853-4dd1-a6c1-fba3fe98d45f",
                 "severity": "critical"
             },
             "result": {
@@ -293,12 +293,12 @@
             "expectation_config": {
                 "type": "expect_column_values_to_match_regex",
                 "kwargs": {
-                    "batch_id": "retail_output_ds_20260327_131734_101444-retail_transformed_asset_20260327_131734_101444",
+                    "batch_id": "retail_output_ds_20260327_161226_705745-retail_transformed_asset_20260327_161226_705745",
                     "column": "_invoice_date_str",
                     "regex": "^\\d{4}-\\d{2}-\\d{2}$"
                 },
                 "meta": {},
-                "id": "311964a5-4f9b-4a84-84b8-d76a816f4040",
+                "id": "35d68263-cba3-4848-84d3-74fd2dfcf641",
                 "severity": "critical"
             },
             "result": {
@@ -325,13 +325,13 @@
             "expectation_config": {
                 "type": "expect_column_values_to_be_between",
                 "kwargs": {
-                    "batch_id": "retail_output_ds_20260327_131734_101444-retail_transformed_asset_20260327_131734_101444",
+                    "batch_id": "retail_output_ds_20260327_161226_705745-retail_transformed_asset_20260327_161226_705745",
                     "column": "year",
                     "min_value": 2023.0,
                     "max_value": 2023.0
                 },
                 "meta": {},
-                "id": "5a85e475-15af-4400-9f97-70e20d9a4dff",
+                "id": "c7c50e85-9eb8-4a1b-a235-a3fe2e80bbc3",
                 "severity": "critical"
             },
             "result": {
@@ -358,13 +358,13 @@
             "expectation_config": {
                 "type": "expect_column_values_to_be_between",
                 "kwargs": {
-                    "batch_id": "retail_output_ds_20260327_131734_101444-retail_transformed_asset_20260327_131734_101444",
+                    "batch_id": "retail_output_ds_20260327_161226_705745-retail_transformed_asset_20260327_161226_705745",
                     "column": "month",
                     "min_value": 1.0,
                     "max_value": 12.0
                 },
                 "meta": {},
-                "id": "fae8b947-a213-49ee-839f-6177876c09a2",
+                "id": "d79aa900-2b52-44f2-9a9e-499029bb5ba7",
                 "severity": "critical"
             },
             "result": {
@@ -391,7 +391,7 @@
             "expectation_config": {
                 "type": "expect_column_values_to_be_in_set",
                 "kwargs": {
-                    "batch_id": "retail_output_ds_20260327_131734_101444-retail_transformed_asset_20260327_131734_101444",
+                    "batch_id": "retail_output_ds_20260327_161226_705745-retail_transformed_asset_20260327_161226_705745",
                     "column": "revenue_bin",
                     "value_set": [
                         "Low",
@@ -400,7 +400,7 @@
                     ]
                 },
                 "meta": {},
-                "id": "9403beba-177b-468b-8008-04b27654180b",
+                "id": "8299d134-1ed3-4b4a-9808-2cfcdabf4442",
                 "severity": "critical"
             },
             "result": {
@@ -427,12 +427,12 @@
             "expectation_config": {
                 "type": "expect_column_values_to_be_between",
                 "kwargs": {
-                    "batch_id": "retail_output_ds_20260327_131734_101444-retail_transformed_asset_20260327_131734_101444",
+                    "batch_id": "retail_output_ds_20260327_161226_705745-retail_transformed_asset_20260327_161226_705745",
                     "column": "total_revenue",
                     "min_value": 0.01
                 },
                 "meta": {},
-                "id": "1e22f51d-c12f-4ebe-a99f-ab5a96f1f229",
+                "id": "c797f9b9-fe1f-4ee2-9365-c21df0faed42",
                 "severity": "critical"
             },
             "result": {
@@ -469,24 +469,24 @@
             "batch_data": "PandasDataFrame"
         },
         "batch_markers": {
-            "ge_load_time": "20260327T181740.615449Z",
+            "ge_load_time": "20260327T211231.485017Z",
             "pandas_data_fingerprint": "5ef3d8cdbab39a6898dbf21d84efd0bf"
         },
         "active_batch_definition": {
-            "datasource_name": "retail_output_ds_20260327_131734_101444",
+            "datasource_name": "retail_output_ds_20260327_161226_705745",
             "data_connector_name": "fluent",
-            "data_asset_name": "retail_transformed_asset_20260327_131734_101444",
+            "data_asset_name": "retail_transformed_asset_20260327_161226_705745",
             "batch_identifiers": {
                 "dataframe": "<DATAFRAME>"
             }
         },
-        "validation_id": "f5efae23-faf4-4e64-81e6-f2adb1ef4e87",
+        "validation_id": "c9bc5e7c-15a7-47c8-8b9b-64f1a3fceee9",
         "checkpoint_id": null,
         "run_id": {
             "run_name": null,
-            "run_time": "2026-03-27T13:17:40.781462-05:00"
+            "run_time": "2026-03-27T16:12:31.623351-05:00"
         },
-        "validation_time": "2026-03-27T18:17:40.781462+00:00",
+        "validation_time": "2026-03-27T21:12:31.623351+00:00",
         "batch_parameters": {
             "dataframe": "<DATAFRAME>"
         }
